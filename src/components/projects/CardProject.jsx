@@ -3,7 +3,7 @@ import demo from '../../assets/card-icon/demo2.png'
 
 
 
-const CardProject = ({ img, name, feature, icon = null, subtitle = null }) => {
+const CardProject = ({ img, name, feature, icon = null, subtitle = null, urlRepo, urlDemo }) => {
   return (
     <section className="bg-[#f1f1f1] relative overflow-hidden group shadow-xl shadow-gray-500 hover:shadow-2xl items-center rounded-lg">
       <img src={img} alt={name} className="rounded-lg h-56 group-hover:blur-[2px] transition-all duration-200 ease-out w-full object-cover"/>
@@ -27,7 +27,7 @@ const CardProject = ({ img, name, feature, icon = null, subtitle = null }) => {
         <article className="text-white flex flex-col items-end gap-3">
           <div className="flex gap-1">
             <img src={icon[0]} alt="" className="h-6 w-6"/>
-            <img src={icon[1]} alt="" className="h-6 w-7"/>
+            <img src={icon[1]} alt="" className="h-6 w-6"/>
             {icon.length > 2 &&  <img src={icon[2]} alt="" className="h-6 w-6"/>}
             {icon.length > 3 &&  <img src={icon[3]} alt="" className="h-6 w-6"/>}  
             {icon.length > 4 &&  <img src={icon[4]} alt="" className="h-6 w-6"/>}     
@@ -36,10 +36,10 @@ const CardProject = ({ img, name, feature, icon = null, subtitle = null }) => {
             
           </div>
           <div className="flex justify-end mt-20">
-            <a href="" className="cursor-pointer">
+            <a href={urlRepo} className="cursor-pointer" target='_blanck'>
               <img src={githubIcon} alt="" className=''/>
             </a>
-            <a href="" className="cursor-pointer">
+            <a href={urlDemo} className="cursor-pointer" target='_blanck'>
               <img src={demo} alt="" className=''/>
             </a>
           </div>

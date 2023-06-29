@@ -1,12 +1,13 @@
 import myphoto from '../assets/personal/fotoportfolio2.jpg'
 import cvlogo from '../assets/personal/cvicon.png'
+import cvpdf from  '../cv/cveliecer.pdf'
 
 const About = () => {
   return (
     <div className='flex flex-col bg-gray-100 mx-4 border-t-[3px] border-blue-500 md:border-green-400 lg:border-black py-6 px-4 rounded-lg md:w-[350px] md:mx-auto md:hover:bg-blue-50 shadow-lg hover:shadow-blue-300 md:hover:shadow-gray-400 duration-500 md:duration-500 transition-all md:transition-all ease-out' id="about">
       <div className="grid grid-cols-2 gap-2 h-44 md:h-44">
       
-      <img src={myphoto} alt="" className='h-[190px] w-56 md:h-[175px] md:w-[140px]  rounded-tl-lg'/>
+      <img src={myphoto} alt="" className='h-[190px] w-56 md:h-[175px] md:w-[135px]  rounded-tl-lg'/>
       
      
      
@@ -16,8 +17,10 @@ const About = () => {
       
     </div>
       <button className='flex mt-6 md:mt-4 gap-2 p-1 items-center justify-center bg-blue-400 text-sm md:text-base border rounded-bl-lg rounded-br-lg hover:bg-blue-500 duration-500 transition-all text-white w-full'>
-        View CV 
-        <img src={cvlogo} alt="" className='w-8 h-8'/>
+        <a href={cvpdf} className='flex gap-2' target='_blank'>
+            View CV 
+            <img src={cvlogo} alt="" className='w-6 h-6'/>
+        </a>
       </button>
     </div>
   )
