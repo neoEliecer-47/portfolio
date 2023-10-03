@@ -13,14 +13,14 @@ const Header = () => {
   
  /* const closeModalAnimation = () => {
     if(!modal){
-      setTimeout(() => {
+      setTimeout(() => {git remote -v
         refModal.current.classList.add("-translate-y-full")
       }, 60);
     }
   }*/
   
   return (
-    <div className='relative flex justify-between gap-2 py-5 px-4  bg-[url("./assets/bg/mobile1.png")] bg-cover bg-center md:bg-[url("./assets/bg/wp9109672.jpg")] md:bg-cover md:bg-center bg-white/40 p-10'>
+    <div className='relative flex justify-between gap-2 py-5 px-4  bg-[url("./assets/bg/mobile1.png")] bg-cover bg-center md:bg-[url("./assets/bg/wp9109672.jpg")] md:bg-cover md:bg-center bg-white/40'>
         <p className='hidden md:flex md:bg-black md:rounded-xl'>
           <img src={eLogo} alt="" className='h-full w-full' />
         </p>
