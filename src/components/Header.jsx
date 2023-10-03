@@ -20,11 +20,11 @@ const Header = () => {
   }*/
   
   return (
-    <div className='relative flex justify-between gap-2 py-5 px-4  bg-[url("./assets/bg/mobile1.png")] bg-cover bg-center md:bg-[url("./assets/bg/wp9109672.jpg")] md:bg-cover md:bg-center bg-white/40'>
+    <div className='relative flex justify-between gap-2 py-5 px-4  bg-[url("./assets/bg/mobile1.png")] bg-cover bg-center md:bg-[url("./assets/bg/wp9109672.jpg")] md:bg-cover md:bg-center '>
         <p className='hidden md:flex md:bg-black md:rounded-xl'>
           <img src={eLogo} alt="" className='h-full w-full' />
         </p>
-        <button onClick={() => setModal(!modal)} className='relative rounded-lg hover:bg-blue-500 duration-500 p-1 bg-blue-400 flex md:hidden'>
+        <button onClick={() => setModal(!modal)} className='relative rounded-lg hover:bg-blue-500 duration-500 p-1 bg-blue-400 flex md:hidden px-4'>
             <MenuIcon />
             {modal && (
               <ModalMobile modal={modal} setModal={setModal} />
