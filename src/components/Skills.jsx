@@ -1,14 +1,16 @@
 import jwtLogo from "../assets/logos/jwt.png";
 import socketIoLogo from "../assets/logos/socket-io.png";
 import postmanLogo from "../assets/logos/postman.png";
-import mongooseLogo from "../assets/logos/mongoosejs.png";
+
 import mysqlLogo from "../assets/logos/mysql.png";
 import postgreLogo from "../assets/logos/postgree.png";
 
-import htmllogo from "../assets/some-skills/html.png";
+
 import jslogo from "../assets/some-skills/js.png";
-import vitelogo from "../assets/some-skills/vitelogo.png";
-import tailwindlogo from "../assets/some-skills/tailwind.png";
+
+import tailwindLogo from "../assets/some-skills/tailwind.png";
+import java from '../assets/some-skills/java.png'
+import nodejs from '../assets/logos/nodejs.png'
 
 const Skills = () => {
   return (
@@ -46,10 +48,10 @@ const Skills = () => {
             title="MySQL"
           />
           <img
-            src={mongooseLogo}
+            src={tailwindLogo}
             alt=""
             className="w-9 h-9 lg:w-12 lg:h-12"
-            title="Mongoose js"
+            title="Tailwind CSS"
           />
           <img
             src={postgreLogo}
@@ -64,31 +66,19 @@ const Skills = () => {
         <div className="border-4 px-11 md:px-24 py-6 group rounded-full relative overflow-hidden">
           <div className="h-2 bg-blue-300 absolute inset-0 transition-all duration-500 ease-out group-hover:h-full"></div>
           <span className="relative text-blue-400 group-hover:text-white">
-            <h2 className="text-center">Frontend</h2>
+            <h2 className="text-center">Backend</h2>
             <figure className="flex gap-1 items-center justify-center">
               <img
-                src={htmllogo}
-                alt=""
+                src={nodejs}
+                alt="nodejs logo"
                 className="h-9 w-9 md:h-10 md:w-10"
-                title="HTML"
+                title="Node.js"
               />
               <img
-                src={jslogo}
-                alt=""
+                src={java}
+                alt="java logo"
                 className="h-9 w-9 md:h-10 md:w-10"
-                title="JavaScript"
-              />
-              <img
-                src={tailwindlogo}
-                alt=""
-                className="h-9 w-9 md:h-10 md:w-10"
-                title="Tailwind CSS"
-              />
-              <img
-                src={vitelogo}
-                alt=""
-                className="h-9 w-9 md:h-10 md:w-10"
-                title="Vite"
+                title="Java"
               />
             </figure>
           </span>
