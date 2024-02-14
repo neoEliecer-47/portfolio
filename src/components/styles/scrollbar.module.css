@@ -1,0 +1,16 @@
+.scrollAbout::-webkit-scrollbar {
+    
+    width: 7px;
+    background-color: azure;
+
+}
+
+.scrollAbout::-webkit-scrollbar-thumb{
+    background-color: blueviolet;
+    border-radius: 1.5rem;
+}
+
+.scrollAbout::-webkit-scrollbar-track{
+    border: 0.4rem solid burlywood;
+    border-radius: 1.5rem;
+}

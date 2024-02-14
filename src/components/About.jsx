@@ -1,6 +1,8 @@
+import classNames from "classnames";
 import myphoto from "../assets/personal/new-portfolio-photo1.jpg";
 import cvlogo from "../assets/personal/cvicon.png";
 import cvpdf from "../cv/CV-DEV-ES1.pdf";
+import styles from './styles/scrollbar.module.css'
 
 const About = () => {
   return (
@@ -12,10 +14,10 @@ const About = () => {
         <img
           src={myphoto}
           alt=""
-          className="h-[190px] w-32 md:h-[175px] md:w-[135px]  rounded-tl-lg"
+          className="h-[190px] w-32 md:h-[175px] md:w-[8.2em]  rounded-tl-lg"
         />
         
-        <p className="text-sm md:text-md text-start scroll-m-0 overflow-auto">
+        <p className={classNames("text-sm md:text-md text-start overflow-auto", styles.scrollAbout)}>
           Hi, I'm Eliecer, passionate about coding and technologies. 2+ Years of
           experience in the software development industry which I handle good
           logic. Experience in iGaming industry in europe as a Web Frontend
@@ -24,7 +26,7 @@ const About = () => {
           I like to grow and challenges.
         </p>
       </div>
-      <button className="flex mt-6 md:mt-4 gap-2 p-1 items-center justify-center bg-blue-400 text-sm md:text-base border rounded-bl-lg rounded-br-lg hover:bg-blue-500 duration-500 transition-all text-white w-full">
+      <button className="flex mt-6 md:mt-4 gap-2 p-1 items-center justify-center bg-blue-400 text-sm md:text-base border rounded-bl-lg rounded-br-lg hover:bg-violet-500 duration-500 transition-all text-white w-full">
         <a href={cvpdf} className="flex gap-2" target="_blank">
           CV
           <img src={cvlogo} alt="" className="w-6 h-6" />
