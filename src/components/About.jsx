@@ -8,14 +8,14 @@ const About = () => {
       className="flex flex-col bg-gray-100 mx-4 border-t-[3px] border-blue-500 md:border-green-400 lg:border-black py-6 px-4 rounded-lg md:w-[350px] md:mx-auto md:hover:bg-blue-50 shadow-lg hover:shadow-blue-300 md:hover:shadow-gray-400 duration-500 md:duration-500 transition-all md:transition-all ease-out"
       id="about"
     >
-      <div className="grid grid-cols-2 gap-2 h-44 md:h-44">
+      <div className="grid gap-2 h-44 md:h-44" style={{gridTemplateColumns: "1fr 1fr"}}>
         <img
           src={myphoto}
           alt=""
           className="h-[190px] w-32 md:h-[175px] md:w-[135px]  rounded-tl-lg"
         />
-        +
-        <p className="text-xs text-start flex-grow">
+        
+        <p className="text-sm md:text-md text-start scroll-m-0 overflow-auto">
           Hi, I'm Eliecer, passionate about coding and technologies. 2+ Years of
           experience in the software development industry which I handle good
           logic. Experience in iGaming industry in europe as a Web Frontend
@@ -26,7 +26,7 @@ const About = () => {
       </div>
       <button className="flex mt-6 md:mt-4 gap-2 p-1 items-center justify-center bg-blue-400 text-sm md:text-base border rounded-bl-lg rounded-br-lg hover:bg-blue-500 duration-500 transition-all text-white w-full">
         <a href={cvpdf} className="flex gap-2" target="_blank">
-          View CV
+          CV
           <img src={cvlogo} alt="" className="w-6 h-6" />
         </a>
       </button>
