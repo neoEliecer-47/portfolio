@@ -26,7 +26,7 @@ return () => clearInterval(intervalId);
   
   return (
     <div className="flex mx-4 flex-col gap-2 items-center font-bold justify-center my-6 border-2 pb-5 px-4">
-      <h1 className="flex mt-8 text-2xl md:text-5xl lg:text-6xl gap-[6px]">Junior<h1 style={h2Style}>Fullstack</h1>Developer</h1>
+      <h1 className="flex mt-8 text-2xl md:text-5xl lg:text-6xl gap-[6px]"><h1 style={h2Style}>Frontend</h1>Developer</h1>
       <div className="bg-gray-100 group relative overflow-hidden py-2 px-6 mt-2 rounded-lg">
       <div className="w-3 bg-gray-300 border border-black/5 absolute inset-0 transition-all duration-500 ease-out group-hover:w-full"></div>
       <article className="relative flex  gap-1 bg-contain duration-500 border-black/10">
