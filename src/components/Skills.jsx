@@ -6,7 +6,6 @@ import mysqlLogo from "../assets/logos/mysql.png";
 import postgreLogo from "../assets/logos/postgree.png";
 
 
-import jslogo from "../assets/some-skills/js.png";
 
 import tailwindLogo from "../assets/some-skills/tailwind.png";
 import java from '../assets/some-skills/java.png'

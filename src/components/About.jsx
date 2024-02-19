@@ -26,7 +26,7 @@ const About = () => {
           )}
         >
           <p className={"text-sm md:text-md text-start p-3 "}>
-            Hi, I'm Eliecer, passionate about coding and technologies. 2+ Years
+            I am Eliecer, passionate about coding and technologies. 2+ Years
             of experience in the software development industry which I handle
             good logic. Experience in iGaming industry in europe as a Web
             Frontend Developer and as a self-taught I keep improving my skills.
@@ -36,7 +36,7 @@ const About = () => {
         </section>
       </div>
       <button className="flex mt-6 md:mt-4 gap-2 p-1 items-center justify-center bg-blue-400 text-sm md:text-base border rounded-bl-lg rounded-br-lg hover:bg-violet-500 duration-500 transition-all text-white w-full">
-        <a href={cvpdf} className="flex gap-2" target="_blank">
+        <a href={cvpdf} className="flex gap-2 font-bold" target="_blank">
           CV
           <img src={cvlogo} alt="" className="w-6 h-6" />
         </a>
