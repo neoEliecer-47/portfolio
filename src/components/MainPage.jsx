@@ -35,7 +35,7 @@ const Main = () => {
   return (
     <div className="flex mx-4 flex-col gap-2 items-center font-bold justify-center my-6 border-2 pb-5 px-4">
       <h1 className="flex mt-8 text-2xl md:text-5xl lg:text-6xl gap-[6px]">
-        <h1 style={h2Style}>Frontend</h1>Developer
+        <h1 style={h2Style} className="font-extrabold tracking-widest">Frontend</h1>Developer
       </h1>
      <NameAnimation words={words}/>
       <div className="bg-gray-100 group relative overflow-hidden py-2 px-6 mt-14 rounded-lg">
