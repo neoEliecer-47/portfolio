@@ -1,11 +1,10 @@
-
+.caja {
+  transition: all 1.5s ease 1s;
+}
 
 .caja:hover {
-  animation-name: caja;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-delay: 1s;
-  transition: all;
+  transform: translateX(200px);
+  transition-delay: 400ms;
 }
 
 .list {
@@ -17,7 +16,7 @@
   animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
-  transition: all;
+  transition: all 0.5s;
 }
 
 .caja::before {
@@ -37,23 +36,8 @@
   color: blue;
   animation-name: opacity;
   animation-duration: 3s;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
 }
-/* }&::after, &::before {
-    position: absolute;
-    top: 0;
-    
-    color: #16a085;
-    font-size: 42px;
-    line-height: 40px;
-    
-    -webkit-animation-name: opacity;
-    -webkit-animation-duration: 250ms;
-    -webkit-animation-iteration-count: infinite;
-    animation-name: opacity;
-    animation-duration: 250ms;
-    animation-iteration-count: infinite;
-  } */
 
 @keyframes change {
   0% {
@@ -81,19 +65,22 @@
   0% {
     transform: translateX(0px);
   }
+  25% {
+    transform: translateX(20px);
+  }
   50% {
     transform: translateX(30px);
+  }
+  75% {
+    transform: translateX(50px);
   }
   100% {
     transform: translateX(60px);
   }
 }
 
-
 @media screen and (min-width: 450px) {
   .list {
-  
-    
     align-items: center;
     justify-content: center;
   }

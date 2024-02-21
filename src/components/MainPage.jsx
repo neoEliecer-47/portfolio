@@ -20,20 +20,6 @@ const Main = () => {
     color: colors[currentColorIndex],
   };
 
-  // function fuc(){
-
-  //   for(var i = 1; i < 6; i++){
-  //     setTimeout(() => {
-  //       console.log(i)
-  //     }, i * 500);
-  //   }
-  //   console.log('hi function test')
-  // }
-
-  // useEffect(() => {
-  //   fuc()
-  // }, [])
-
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -69,6 +55,7 @@ const Main = () => {
             alt="rc"
             className="h-8 w-8 md:h-10 md:w-10"
             title="React"
+            
           />
           <img
             src={nextLogo}

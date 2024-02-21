@@ -4,6 +4,8 @@ import cvlogo from "../assets/personal/cvicon.png";
 import cvpdf from "../cv/CV-DEV-ES1.pdf";
 import styles from "./styles/scrollbar.module.css";
 
+import aboutStyles from './About.module.css'
+
 const About = () => {
   return (
     <div
@@ -35,7 +37,7 @@ const About = () => {
           </p>
         </section>
       </div>
-      <button className="flex mt-6 md:mt-4 gap-2 p-1 items-center justify-center bg-blue-400 text-sm md:text-base border rounded-bl-lg rounded-br-lg hover:bg-violet-500 duration-500 transition-all text-white w-full">
+      <button className={classNames("flex mt-6 md:mt-4 gap-2 p-1 items-center justify-center bg-blue-400 text-sm md:text-base border rounded-bl-lg rounded-br-lg hover:bg-violet-500 text-white w-full", aboutStyles.buttonCv)}>
         <a href={cvpdf} className="flex gap-2 font-bold" target="_blank">
           CV
           <img src={cvlogo} alt="" className="w-6 h-6" />
