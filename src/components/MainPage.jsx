@@ -33,7 +33,7 @@ const Main = () => {
   const words = ['Eliecer', 'users', 'Everyone', 'mother fuckers']
 
   return (
-    <div className="flex mx-4 flex-col gap-2 items-center font-bold justify-center my-6 border-2 pb-5 px-4">
+    <div className="flex mx-4 flex-col gap-2 items-center font-bold justify-center my-6 border-2 pb-5 px-4 mt-[2.2rem]">
       <h1 className="flex mt-8 text-2xl md:text-5xl lg:text-6xl gap-[6px]">
         <h1 style={h2Style} className="font-extrabold tracking-widest">Frontend</h1>Developer
       </h1>

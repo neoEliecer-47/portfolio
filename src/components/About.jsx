@@ -49,8 +49,8 @@ const About = () => {
         >
           <p className={"text-sm md:text-md text-start p-3 "}>
             I am Eliecer, passionate about coding and technologies. 2+ Years of
-            experience in the software development industry which I handle good
-            logic. Experience in iGaming industry in europe as a Web Frontend
+            experience in the web development industry which I handle good
+            logic and several years in develpment world since my beginnings. Experience in iGaming industry in europe as a Web Frontend
             Developer and as a self-taught I keep improving my skills.
             Experience with Java and Node.js. I like challenges and human
             quality above all. I like to grow and challenges.
