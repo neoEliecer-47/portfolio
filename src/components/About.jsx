@@ -3,7 +3,7 @@ import myphoto from "../assets/personal/new-portfolio-photo1.jpg";
 import cvlogo from "../assets/personal/cvicon.png";
 import cvpdf from "../cv/CV-DEV-ES1.pdf";
 import styles from "./styles/scrollbar.module.css";
-import './lazyLoad.css'
+
 import aboutStyles from "./About.module.css";
 import { useRef, useEffect, useState } from "react";
 
@@ -16,12 +16,8 @@ const About = () => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
       console.log(entry);
-      if (entry.isIntersecting) {
-        entry.target.classList.add("lazyLoad");
-      } else {
-        entry.target.classList.remove("lazyLoad");
-      }
-      //setIsVisible(entry.isIntersecting);//its better to do it with only vanilla js in this case, to avoid renders every time ths state changes
+      setIsVisible(entry.isIntersecting);//its better to do it with only vanilla js in this case, to avoid renders every time ths state changes
+      //true o false
     });
 
     observer.observe(ref.current);
@@ -29,7 +25,10 @@ const About = () => {
 
   return (
     <div
-      className="w-[22rem] flex flex-col bg-gray-100 mx-4 border-t-[3px] border-blue-500 md:border-green-400 lg:border-black py-6 px-4 rounded-lg md:w-[350px] md:mx-auto md:hover:bg-blue-50 shadow-lg hover:shadow-blue-300 md:hover:shadow-gray-400 transition-all"
+      className={classNames(
+        "w-[22rem] flex flex-col bg-gray-100 mx-4 border-t-[3px] border-blue-500 md:border-green-400 lg:border-black py-6 px-4 rounded-lg md:w-[350px] md:mx-auto md:hover:bg-blue-50 shadow-lg hover:shadow-blue-300 md:hover:shadow-gray-400 transition-all",
+        `${isVisible ? aboutStyles.lazyLoad : ""}`/*el estado esta haciendo que se vuelva a renderizar cada vez que hay un cambio por ende se vuelve a ejecutar el observer en el useEffect*/ 
+      )}
       id="about"
       ref={ref}
     >
