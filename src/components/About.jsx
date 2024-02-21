@@ -5,23 +5,12 @@ import cvpdf from "../cv/CV-DEV-ES1.pdf";
 import styles from "./styles/scrollbar.module.css";
 
 import aboutStyles from "./About.module.css";
-import { useRef, useEffect, useState } from "react";
+import { useLazyLoad } from "../hooks/useLazyLoad";
+
 
 const About = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef();
 
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      const entry = entries[0];
-      console.log(entry);
-      setIsVisible(entry.isIntersecting);//its better to do it with only vanilla js in this case, to avoid renders every time ths state changes
-      //true o false
-    });
-
-    observer.observe(ref.current);
-  }, []);
+  const { isVisible, ref } = useLazyLoad()
 
   return (
     <div

@@ -10,16 +10,24 @@ import postgreLogo from "../assets/logos/postgree.png";
 import tailwindLogo from "../assets/some-skills/tailwind.png";
 import java from '../assets/some-skills/java.png'
 import nodejs from '../assets/logos/nodejs.png'
+import { useLazyLoad } from "../hooks/useLazyLoad";
+import classNames from "classnames";
+import styles from './lazyLoad.module.css'
 
 const Skills = () => {
+
+  const { isVisible, ref } = useLazyLoad()
+
   return (
     <div
-      className="flex flex-col md:flex-row md:max-w-[940px] md:mx-auto gap-1 mx-4"
+      className={classNames("flex flex-col md:flex-row md:max-w-[940px] md:mx-auto gap-1 mx-4", `${isVisible && styles.skills}`)}
       id="skills"
+      ref={ref}
+      
     >
       <div className=" border-4 px-12 py-6 bg-blue-500 relative overflow-hidden group shadow-xl shadow-gray-500 hover:shadow-2xl items-center rounded-full">
         <h1 className="text-white font-bold text-center text-sm">
-          Backend technologies with which i have also worked with:
+          Technologies which I have also worked with:
         </h1>
         <article className="inset-0 absolute p-4 flex gap-1 items-center justify-center bg-[#3b3d3d] opacity-0 scale-110 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200 ease-out">
           <img
