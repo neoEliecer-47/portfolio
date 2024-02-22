@@ -21,33 +21,27 @@
   }
 }
 
-
-
 /* lazy load */
 
-.lazyLoad{
-   animation: lazy-load 800ms linear 0s;
-   animation-iteration-count: 1;/* defaulgt value */
-   transition: all 1s;
-   filter: blur(0px);
-   transition: filter 0.5s linear;
+.lazyLoad {
+  animation: lazy-load 800ms linear 0s;
+  animation-iteration-count: 1; /* defaulgt value */
+  transition: all 1s;
+  filter: blur(0px);
+  transition: filter 0.5s linear;
 }
 
 @keyframes lazy-load {
-    from{
-        transform: translateY(200px);
-        opacity: 0;
-        filter: blur(10px);
-        filter: grayscale(50%)
-    }
-    to{
-        transform: translateY(0px);
-        opacity: 1;
-        filter: blur(0px);
-        ilter: grayscale(0%)
-    }
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+    filter: blur(10px);
+    filter: grayscale(50%);
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+    filter: blur(0px);
+    ilter: grayscale(0%);
+  }
 }
-
-
-
-

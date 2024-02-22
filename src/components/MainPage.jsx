@@ -4,6 +4,8 @@ import ts from "../assets/some-skills/typescript.png";
 import reactLogo from "../assets/logos/reactjs2.png";
 import nextLogo from "../assets/some-skills/nextjs.png";
 import NameAnimation from "./ui/NameAnimation";
+import classNames from "classnames";
+import styles from './rubberBand.module.css'
 
 const Main = () => {
   const [currentColorIndex, setCurrentColorIndex] = useState(0);
@@ -30,13 +32,30 @@ const Main = () => {
     return () => clearInterval(intervalId); //clean the interval
   }, [colors.length]);
 
-  const words = ['Eliecer', 'users', 'Everyone', 'mother fuckers']
+  const words = ['I am Eliecer', 'Recruiters', 'Code Enthusiasts', 'Developers', 'Users', 'Technologists', 'Frontend Engineers', 'Software Developers', 'Everyone, welcome']
 
   return (
     <div className="flex mx-4 flex-col gap-2 items-center font-bold justify-center my-6 border-2 pb-5 px-4 mt-[2.2rem]">
-      <h1 className="flex mt-8 text-2xl md:text-5xl lg:text-6xl gap-[6px]">
-        <h1 style={h2Style} className="font-extrabold tracking-widest">Frontend</h1>Developer
-      </h1>
+      <section className={classNames("flex mt-8 text-2xl md:text-4xl lg:text-6xl gap-[6px] tracking-widest font-extrabold", styles.wrapperRB)}>
+        <span style={h2Style} className={styles.RB}>F</span>
+        <span style={h2Style} className={styles.RB}>r</span>
+        <span style={h2Style} className={styles.RB}>o</span>
+        <span style={h2Style} className={styles.RB}>n</span>
+        <span style={h2Style} className={styles.RB}>t</span>
+        <span style={h2Style} className={styles.RB}>e</span>
+        <span style={h2Style} className={styles.RB}>n</span>
+        <span style={h2Style} className={classNames("mr-[1.2rem]", styles.RB)}>d</span>
+        
+        <span className={styles.RB}>D</span>
+        <span className={styles.RB}>e</span>
+        <span className={styles.RB}>v</span>
+        <span className={styles.RB}>e</span>
+        <span className={styles.RB}>l</span>
+        <span className={styles.RB}>o</span>
+        <span className={styles.RB}>p</span>
+        <span className={styles.RB}>e</span>
+        <span className={styles.RB}>r</span>
+      </section>
      <NameAnimation words={words}/>
       <div className="bg-gray-100 group relative overflow-hidden py-2 px-6 mt-14 rounded-lg">
         <div
