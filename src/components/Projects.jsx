@@ -12,8 +12,7 @@ import nodejsLogo from "../assets/logos/nodejs.png";
 import expressLogo from "../assets/logos/express.png";
 import mongoLogo from "../assets/logos/mongo4.png";
 
-
-import styles from './Projects.module.css'
+import styles from "./Projects.module.css";
 import { useLazyLoad } from "../hooks/useLazyLoad";
 
 const projectsData = [
@@ -79,11 +78,8 @@ const projectsData = [
 ];
 
 const Projects = () => {
-
-
-  const { isVisible: visible1, ref: ref1 } = useLazyLoad()
-  const { isVisible: visible2, ref: ref2 } = useLazyLoad()
-
+  const { isVisible: visible1, ref: ref1 } = useLazyLoad();
+  const { isVisible: visible2, ref: ref2 } = useLazyLoad();
 
   return (
     <>
@@ -105,18 +101,18 @@ const Projects = () => {
                 urlRepo,
                 urlDemo,
               }) => (
-                <div ref={ref1} className={`${visible1 ? styles.lazyLoad : ""}`}>
+                <div className={`${visible1 ? styles.lazyLoad : ""}`}>
                   <CardProject
-                  key={id}
-                  img={img}
-                  name={name}
-                  feature={features}
-                  icon={icons}
-                  subtitle={subtitle}
-                  urlRepo={urlRepo}
-                  urlDemo={urlDemo}
-                  
-                />
+                    key={id}
+                    img={img}
+                    name={name}
+                    feature={features}
+                    icon={icons}
+                    subtitle={subtitle}
+                    urlRepo={urlRepo}
+                    urlDemo={urlDemo}
+                    reference={ref1}
+                  />
                 </div>
               )
             )}
@@ -136,15 +132,15 @@ const Projects = () => {
               }) => (
                 <div ref={ref2} className={visible2 ? styles.lazyLoad2 : ""}>
                   <CardProject
-                  key={id}
-                  img={img}
-                  name={name}
-                  feature={features}
-                  icon={icons}
-                  subtitle={subtitle}
-                  urlRepo={urlRepo}
-                  urlDemo={urlDemo}
-                />
+                    key={id}
+                    img={img}
+                    name={name}
+                    feature={features}
+                    icon={icons}
+                    subtitle={subtitle}
+                    urlRepo={urlRepo}
+                    urlDemo={urlDemo}
+                  />
                 </div>
               )
             )}

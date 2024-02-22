@@ -35,8 +35,8 @@ const Main = () => {
   const words = ['I am Eliecer', 'Recruiters', 'Code Enthusiasts', 'Developers', 'Users', 'Technologists', 'Frontend Engineers', 'Software Developers', 'Everyone, welcome']
 
   return (
-    <div className="flex mx-4 flex-col gap-2 items-center font-bold justify-center my-6 border-2 pb-5 px-4 mt-[2.2rem]">
-      <section className={classNames("flex mt-8 text-2xl md:text-4xl lg:text-6xl gap-[6px] tracking-widest font-extrabold", styles.wrapperRB)}>
+    <div className="bg-white/20 flex flex-col gap-2 items-center font-bold justify-center my-6 border-2 pb-5  mt-[2.2rem]">
+      <section className={classNames("flex items-center justify-center mt-8 text-xl md:text-3xl lg:text-5xl gap-[6px] tracking-widest font-extrabold", styles.wrapperRB)}>
         <span style={h2Style} className={styles.RB}>F</span>
         <span style={h2Style} className={styles.RB}>r</span>
         <span style={h2Style} className={styles.RB}>o</span>
@@ -44,7 +44,7 @@ const Main = () => {
         <span style={h2Style} className={styles.RB}>t</span>
         <span style={h2Style} className={styles.RB}>e</span>
         <span style={h2Style} className={styles.RB}>n</span>
-        <span style={h2Style} className={classNames("mr-[1.2rem]", styles.RB)}>d</span>
+        <span style={h2Style} className={classNames("mr-[0.8rem] md:mr-[1.2rem]", styles.RB)}>d</span>
         
         <span className={styles.RB}>D</span>
         <span className={styles.RB}>e</span>

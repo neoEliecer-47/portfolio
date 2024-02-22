@@ -5,14 +5,18 @@
  }
  
  @keyframes lazy-load {
-     from{
-         transform: translateY(200px);
-         opacity: 0;
-     }
-     to{
-         transform: translateY(0px);
-         opacity: 1;
-     }
+    0%{
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    50%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
  }
 
  .skills{
