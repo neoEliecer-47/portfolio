@@ -1,0 +1,69 @@
+:root {
+  --color: #9176ff;
+  --dark-color: #2b2b2b;
+  --dark-icon-color: #fff;
+  --light-color: #f7f7f7;
+  --light-icon-color: #ffde59;
+}
+
+.btn {
+  background-color: var(--dark-icon-color);
+  width: 18em;
+  height: 8em;
+  border-radius: 10em;
+  padding: 0 0.5em;
+
+  box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
+    inset 0 8px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.1);
+
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.btn__indicator {
+  background-color: var(--dark-icon-color);
+  width: 7em;
+  height: 7em;
+  border-radius: 50%;
+  position: absolute;
+  transform: translateX(10em);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 500ms ease;
+}
+
+.btn_indicator_sun {
+  transform: translateX(10em);
+}
+
+.btn_indicator_moon {
+  transform: translateX(-0.1em);
+}
+
+.btn__icon__container {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn_icon_sun {
+  color: var(--light-icon-color);
+}
+.btn_icon_moon {
+  color: var(--dark-color);
+}
+
+.animated{
+    animation: spin-icon 700ms ease;
+}
+
+@keyframes spin-icon {
+    to{
+        transform: rotate(360deg);
+    }
+}

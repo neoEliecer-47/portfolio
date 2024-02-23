@@ -86,6 +86,7 @@ const Projects = () => {
       <div
         className="py-6 px-4 grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 lg:max-w-[1080px] lg:mx-auto"
         id="projets"
+        key={''}
       >
         {projectsData.length > 0 &&
           projectsData
@@ -101,7 +102,7 @@ const Projects = () => {
                 urlRepo,
                 urlDemo,
               }) => (
-                <div className={`${visible1 ? styles.lazyLoad : ""}`}>
+                <div ref={ref1} className={`${visible1 && styles.lazyLoad}`}>
                   <CardProject
                     key={id}
                     img={img}

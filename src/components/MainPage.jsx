@@ -5,7 +5,7 @@ import reactLogo from "../assets/logos/reactjs2.png";
 import nextLogo from "../assets/some-skills/nextjs.png";
 import NameAnimation from "./ui/NameAnimation";
 import classNames from "classnames";
-import styles from './rubberBand.module.css'
+import styles from "./rubberBand.module.css";
 
 const Main = () => {
   const [currentColorIndex, setCurrentColorIndex] = useState(0);
@@ -22,7 +22,6 @@ const Main = () => {
     color: colors[currentColorIndex],
   };
 
-
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentColorIndex(
@@ -32,20 +31,56 @@ const Main = () => {
     return () => clearInterval(intervalId); //clean the interval
   }, [colors.length]);
 
-  const words = ['I am Eliecer', 'Recruiters', 'Code Enthusiasts', 'Developers', 'Users', 'Technologists', 'Frontend Engineers', 'Software Developers', 'Everyone, welcome']
+  
+
+  const words = [
+    "I am Eliecer",
+    "Recruiters",
+    "Code Enthusiasts",
+    "Developers",
+    "Users",
+    "Technologists",
+    "Frontend Engineers",
+    "Software Developers",
+    "Everyone, welcome",
+  ];
 
   return (
     <div className="bg-white/20 flex flex-col gap-2 items-center font-bold justify-center my-6 border-2 pb-5  mt-[2.2rem]">
-      <section className={classNames("flex items-center justify-center mt-8 text-xl md:text-3xl lg:text-5xl gap-[6px] tracking-widest font-extrabold", styles.wrapperRB)}>
-        <span style={h2Style} className={styles.RB}>F</span>
-        <span style={h2Style} className={styles.RB}>r</span>
-        <span style={h2Style} className={styles.RB}>o</span>
-        <span style={h2Style} className={styles.RB}>n</span>
-        <span style={h2Style} className={styles.RB}>t</span>
-        <span style={h2Style} className={styles.RB}>e</span>
-        <span style={h2Style} className={styles.RB}>n</span>
-        <span style={h2Style} className={classNames("mr-[0.8rem] md:mr-[1.2rem]", styles.RB)}>d</span>
-        
+      <section
+        className={classNames(
+          "flex items-center justify-center mt-8 text-xl md:text-3xl lg:text-5xl gap-[6px] tracking-widest font-extrabold",
+          styles.wrapperRB
+        )}
+      >
+        <span style={h2Style} className={styles.RB}>
+          F
+        </span>
+        <span style={h2Style} className={styles.RB}>
+          r
+        </span>
+        <span style={h2Style} className={styles.RB}>
+          o
+        </span>
+        <span style={h2Style} className={styles.RB}>
+          n
+        </span>
+        <span style={h2Style} className={styles.RB}>
+          t
+        </span>
+        <span style={h2Style} className={styles.RB}>
+          e
+        </span>
+        <span style={h2Style} className={styles.RB}>
+          n
+        </span>
+        <span
+          style={h2Style}
+          className={classNames("mr-[0.8rem] md:mr-[1.2rem]", styles.RB)}
+        >
+          d
+        </span>
+
         <span className={styles.RB}>D</span>
         <span className={styles.RB}>e</span>
         <span className={styles.RB}>v</span>
@@ -56,7 +91,7 @@ const Main = () => {
         <span className={styles.RB}>e</span>
         <span className={styles.RB}>r</span>
       </section>
-     <NameAnimation words={words}/>
+      <NameAnimation words={words} />
       <div className="bg-gray-100 group relative overflow-hidden py-2 px-6 mt-14 rounded-lg">
         <div
           style={{ backgroundColor: `${h2Style.color}` }}
@@ -74,7 +109,6 @@ const Main = () => {
             alt="rc"
             className="h-8 w-8 md:h-10 md:w-10"
             title="React"
-            
           />
           <img
             src={nextLogo}

@@ -6,17 +6,18 @@ import styles from "./styles/scrollbar.module.css";
 
 import aboutStyles from "./About.module.css";
 import { useLazyLoad } from "../hooks/useLazyLoad";
-
+import DarkModeUI from "./ui/DarkModeUI";
 
 const About = () => {
-
-  const { isVisible, ref } = useLazyLoad()
+  const { isVisible, ref } = useLazyLoad();
 
   return (
     <div
       className={classNames(
         "w-[22rem] flex flex-col bg-gray-100 border-t-[3px] border-blue-500 md:border-green-400 lg:border-black py-6 px-4 mx-4 rounded-lg md:w-[350px] md:mx-auto md:hover:bg-blue-50 shadow-lg hover:shadow-blue-300 md:hover:shadow-gray-400 transition-all mb-[0.8rem]",
-        `${isVisible ? aboutStyles.lazyLoad : ""}`/*el estado esta haciendo que se vuelva a renderizar cada vez que hay un cambio por ende se vuelve a ejecutar el observer en el useEffect*/ 
+        `${
+          isVisible ? aboutStyles.lazyLoad : ""
+        }` /*el estado esta haciendo que se vuelva a renderizar cada vez que hay un cambio por ende se vuelve a ejecutar el observer en el useEffect*/
       )}
       id="about"
       ref={ref}
@@ -38,11 +39,12 @@ const About = () => {
         >
           <p className={"text-sm md:text-md text-start p-3 "}>
             I am Eliecer, passionate about coding and technologies. 2+ Years of
-            experience in the web development industry which I handle good
-            logic and several years in develpment world since my beginnings. Experience in iGaming industry in europe as a Web Frontend
-            Developer and as a self-taught I keep improving my skills.
-            Experience with Java and Node.js. I like challenges and human
-            quality above all. I like to grow and challenges.
+            experience in the web development industry which I handle good logic
+            and several years in develpment world since my beginnings.
+            Experience in iGaming industry in europe as a Web Frontend Developer
+            and as a self-taught I keep improving my skills. Experience with
+            Java and Node.js. I like challenges and human quality above all. I
+            like to grow and challenges.
           </p>
         </section>
       </div>
