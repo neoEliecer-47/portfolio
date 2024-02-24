@@ -9,17 +9,16 @@ const Modal = ({ setModal, modal }) => {
   if (modal) {
     setTimeout(() => {
       refModal.current.classList.remove("-translate-x-full");
-    }, 50);
+    }, 20);
   }
 
   return (
+    //`${!modal && " "}`
     <div
       ref={refModal}
       className={classNames(
-        `absolute shadow-2xl shadow-gray-500 bg-opacity-80  transform -translate-x-full  flex flex-col top-12 -left-[12rem] z-10 md:hidden h-52 rounded-lg w-36  bg-blue-300 transition-all duration-500 ease-linear ${
-          !modal && "-left-[135px]"
-        }`,
-        `${!modal && "translate-x-full"}` //this whould have been easier to design with pure css
+        "absolute shadow-2xl shadow-gray-500 bg-opacity-80  transform -translate-x-full  flex flex-col top-12 -left-[21rem] z-10 md:hidden h-52 rounded-lg w-36  bg-blue-300 dark:bg-blue-800 transition-all duration-500 ease-linear",
+        modal && "translate-x-full -left-[9rem]"
       )}
     >
       <CloseIcon onClick={() => setModal(false)} />
@@ -28,7 +27,7 @@ const Modal = ({ setModal, modal }) => {
         to="projets"
         smooth={true}
         duration={700}
-        className="font-semibold mt-10 p-2 bg-white rounded-tl-lg rounded-tr-lg hover:bg-blue-500 hover:text-white duration-500 mx-4"
+        className="dark:bg-white/85 font-semibold mt-10 p-2 bg-white rounded-tl-lg rounded-tr-lg md:hover:bg-blue-500 hover:text-white duration-500 mx-4"
       >
         Projects
       </Link>
@@ -37,7 +36,7 @@ const Modal = ({ setModal, modal }) => {
         to="skills"
         smooth={true}
         duration={700}
-        className="font-semibold p-2 bg-white hover:bg-blue-500 hover:text-white duration-500 mx-4 shadow-xl"
+        className="dark:bg-white/85 font-semibold p-2 bg-white md:hover:bg-blue-500 hover:text-white duration-500 mx-4 shadow-xl"
       >
         Skills
       </Link>
@@ -46,7 +45,7 @@ const Modal = ({ setModal, modal }) => {
         to="contact"
         smooth={true}
         duration={700}
-        className="font-semibold p-2 bg-white rounded-bl-lg rounded-br-lg hover:bg-blue-500 hover:text-white duration-500 mx-4 shadow-xl"
+        className="dark:bg-white/85 font-semibold p-2 bg-white rounded-bl-lg rounded-br-lg md:hover:bg-blue-500 hover:text-white duration-500 mx-4 shadow-xl"
       >
         Contact
       </Link>

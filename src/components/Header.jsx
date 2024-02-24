@@ -7,7 +7,7 @@ import DarkModeUI from "./ui/DarkModeUI";
 
 const Header = () => {
   const [modal, setModal] = useState(false);
-
+  console.log(modal)
   return (
     <div className='relative flex justify-between gap-2 py-5 px-4  bg-black/80 bg-cover bg-center md:bg-[url("./assets/bg/wp9109672.jpg")] md:bg-cover md:bg-center'>
       <section className="hidden md:flex md:items-center md:justify-center rounded-[10em] m-0 ">
