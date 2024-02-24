@@ -9,18 +9,21 @@ const Header = () => {
   const [modal, setModal] = useState(false);
 
   return (
-    <div className='relative flex justify-between gap-2 py-5 px-4  bg-[url("./assets/bg/mobile1.png")] bg-cover bg-center md:bg-[url("./assets/bg/wp9109672.jpg")] md:bg-cover md:bg-center'>
-      <section className="hidden md:flex items-center md:bg-white m-0 rounded-[10em]">
+    <div className='relative flex justify-between gap-2 py-5 px-4  bg-black/80 bg-cover bg-center md:bg-[url("./assets/bg/wp9109672.jpg")] md:bg-cover md:bg-center'>
+      <section className="hidden md:flex md:items-center md:justify-center rounded-[10em] m-0 ">
         <DarkModeUI />
       </section>
-      <button
-        onClick={() => setModal(!modal)}
-        className=" relative rounded-lg hover:bg-blue-500 duration-500 p-1 bg-blue-400 flex md:hidden"
-      >
-        <MenuIcon />
+      <div className="md:hidden flex justify-between items-center w-full">
+        <button
+          onClick={() => setModal(!modal)}
+          className="h-[2.3rem] w-9 relative rounded-lg flex items-center justify-center hover:bg-blue-500 duration-500 p-1 bg-blue-400 md:hidden"
+        >
+          <MenuIcon />
 
-        <ModalMobile modal={modal} setModal={setModal} />
-      </button>
+          <ModalMobile modal={modal} setModal={setModal} />
+        </button>
+        <DarkModeUI />
+      </div>
       <section className="hidden md:flex bg-blue-400 py-2 px-4 rounded-lg bg-opacity-40 items-center">
         <Link
           to="projets"

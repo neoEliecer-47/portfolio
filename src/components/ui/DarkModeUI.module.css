@@ -8,8 +8,8 @@
 
 .btn {
   background-color: var(--dark-icon-color);
-  width: 18em;
-  height: 8em;
+  width: 7em;
+  height: 3em;
   border-radius: 10em;
   padding: 0 0.5em;
 
@@ -25,17 +25,17 @@
 
 .btn__indicator {
   background-color: var(--dark-icon-color);
-  width: 7em;
-  height: 7em;
+  width: 2.2em;
+  height: 2.2em;
   border-radius: 50%;
   position: absolute;
   transform: translateX(10em);
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.2);
-  transition: transform 500ms ease;
+  transition: all 500ms ease;
 }
 
 .btn_indicator_sun {
-  transform: translateX(10em);
+  transform: translateX(4em);
 }
 
 .btn_indicator_moon {
@@ -70,5 +70,19 @@
 @keyframes spin-icon {
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and(min-width: 768px) {
+  .btn {
+    width: 18em;
+    height: 100%;
+  }
+  .btn__indicator {
+    width: 10em;
+    height: 7em;
+  }
+  .btn_indicator_sun {
+    transform: translateX(10em);
   }
 }

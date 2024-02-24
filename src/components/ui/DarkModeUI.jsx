@@ -31,7 +31,7 @@ const DarkModeUI = () => {
         
           <FontAwesomeIcon
             className={classNames(
-              "w-[3em] h-[3em]",
+              "w-[1.5em] h-[1.5em] md:w-[1.8em] md:h-[1.8em]",
               darkMode ? styles.btn_icon_moon : styles.btn_icon_sun
             )}
             icon={darkMode ? faMoon : faSun}
