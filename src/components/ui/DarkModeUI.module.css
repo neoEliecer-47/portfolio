@@ -51,19 +51,24 @@
   justify-content: center;
 }
 
+.btn_icon_container_moon {
+  background-color: #3f337b;
+  border-radius: 100%;
+}
+
 .btn_icon_sun {
   color: var(--light-icon-color);
 }
 .btn_icon_moon {
-  color: var(--dark-color);
+  color: var(--dark-icon-color);
 }
 
-.animated{
-    animation: spin-icon 700ms ease;
+.animated {
+  animation: spin-icon 700ms ease;
 }
 
 @keyframes spin-icon {
-    to{
-        transform: rotate(360deg);
-    }
+  to {
+    transform: rotate(360deg);
+  }
 }

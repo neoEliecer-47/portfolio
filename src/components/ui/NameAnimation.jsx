@@ -16,11 +16,11 @@ const NameAnimation = ({ words }) => {
   useEffect(() => {
     wordToShow();
   }, []);
-
+ 
   return (
     <section className={classNames("flex gap-[1rem]", styles.caja)}>
-      <h2 className="md:text-2xl">Hello,</h2>
-      <h2 className={classNames("md:text-2xl", styles.list)}>{currentWord}!</h2>
+      <h2 className="md:text-2xl dark:text-white/80">Hello,</h2>
+      <h2 className={classNames("md:text-2xl dark:text-white/80", styles.list)}>{currentWord}!</h2>
     </section>
   );
 };

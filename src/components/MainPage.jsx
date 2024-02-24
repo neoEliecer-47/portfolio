@@ -31,8 +31,6 @@ const Main = () => {
     return () => clearInterval(intervalId); //clean the interval
   }, [colors.length]);
 
-  
-
   const words = [
     "I am Eliecer",
     "Recruiters",
@@ -46,10 +44,10 @@ const Main = () => {
   ];
 
   return (
-    <div className="bg-white/20 flex flex-col gap-2 items-center font-bold justify-center my-6 border-2 pb-5  mt-[2.2rem]">
+    <div className="bg-white/35 dark:bg-black/85 flex flex-col gap-2 items-center font-bold justify-center my-6 pb-5  mt-[2.2rem] transition-all duration-700 ease-in">
       <section
         className={classNames(
-          "flex items-center justify-center mt-8 text-xl md:text-3xl lg:text-5xl gap-[6px] tracking-widest font-extrabold",
+          "dark:text-white/90 flex items-center justify-center mt-8 text-xl md:text-3xl lg:text-5xl gap-[6px] tracking-widest font-extrabold",
           styles.wrapperRB
         )}
       >
@@ -95,8 +93,8 @@ const Main = () => {
       <div className="bg-gray-100 group relative overflow-hidden py-2 px-6 mt-14 rounded-lg">
         <div
           style={{ backgroundColor: `${h2Style.color}` }}
-          className="w-3 border border-black/5 absolute inset-0 transition-all duration-500 ease-out group-hover:w-full"
-        ></div>
+          className=" w-3 border border-black/5 absolute inset-0 transition-all duration-500 ease-out group-hover:w-full"
+        />
         <article className="relative flex  gap-1 bg-contain duration-500 border-black/10">
           <img
             src={js}
