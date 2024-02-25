@@ -18,10 +18,10 @@ const app = () => {
       <Header />
       <Main />
       <section className="flex items-center justify-center">
-        <About />
+       
       </section>
       <Projects />
-      <Skills />
+      
       <Contact />
     </div>
   );

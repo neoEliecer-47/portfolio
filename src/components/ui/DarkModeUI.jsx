@@ -20,7 +20,7 @@ const DarkModeUI = () => {
         document.documentElement.classList.remove("dark");
         localStorage.setItem("theme", "light");
       }
-      refICon.current.classList.add(styles.animated);
+      refICon.current?.classList.add(styles.animated);
     }, 50);
   }, [darkMode]);
 

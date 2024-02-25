@@ -78,8 +78,8 @@ const projectsData = [
 ];
 
 const Projects = () => {
-  const { isVisible: visible1, ref: ref1 } = useLazyLoad();
-  const { isVisible: visible2, ref: ref2 } = useLazyLoad();
+  const { isVisible: visible1, ref: ref1 } = useLazyLoad(projectsData);
+  const { isVisible: visible2, ref: ref2 } = useLazyLoad(projectsData);
 
   return (
     <>
@@ -101,8 +101,8 @@ const Projects = () => {
                 icons,
                 urlRepo,
                 urlDemo,
-              }) => (
-                <div ref={ref1} className={`${visible1 && styles.lazyLoad}`}>
+              }, index) => (
+                <div ref={ref1.current[index]} className={`${visible1 && styles.lazyLoad}`}>
                   <CardProject
                     key={id}
                     img={img}
@@ -112,7 +112,7 @@ const Projects = () => {
                     subtitle={subtitle}
                     urlRepo={urlRepo}
                     urlDemo={urlDemo}
-                    reference={ref1}
+                    
                   />
                 </div>
               )
@@ -130,8 +130,8 @@ const Projects = () => {
                 icons,
                 urlRepo,
                 urlDemo,
-              }) => (
-                <div ref={ref2} className={visible2 ? styles.lazyLoad2 : ""}>
+              }, index) => (
+                <div ref={ref2.current[index]} className={visible2 ? styles.lazyLoad2 : ""}>
                   <CardProject
                     key={id}
                     img={img}

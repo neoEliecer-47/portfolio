@@ -10,7 +10,7 @@ const CardProject = ({
   subtitle = null,
   urlRepo,
   urlDemo,
-  reference = null
+ 
 }) => {
   
   
@@ -18,7 +18,7 @@ const CardProject = ({
   
   
   return (
-    <section ref={reference} className="bg-[#f1f1f1] relative overflow-hidden group shadow-xl shadow-gray-500 hover:shadow-2xl items-center rounded-lg">
+    <section className="bg-[#f1f1f1] relative overflow-hidden group shadow-xl shadow-gray-500 hover:shadow-2xl items-center rounded-lg">
       <img
         src={img}
         alt={name}

@@ -1,9 +1,12 @@
-import { useEffect, useRef, useState } from "react";
-export function useLazyLoad() {
+
+import { useEffect, useRef, useState, createRef } from "react";
+export function useLazyLoad( projectData ) {
   const [isVisible, setIsVisible] = useState(false);
-
-  const ref = useRef();
-
+  console.log(projectData)
+  const ref = useRef([]);
+  let elementos = []
+  elementos.push(ref.current = projectData?.map((_, index) => ref.current[index] ?? createRef()))//this evaluate every hiddenElement to push them in an array, otherwise if it is undefined it creates a reference for that hiddemElement
+  console.log(elementos)
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       const entry = entries[0];
@@ -11,7 +14,7 @@ export function useLazyLoad() {
       setIsVisible(entry.isIntersecting); //its better to do it with only vanilla js in this case, to avoid renders every time the state changes
     });
 
-    observer.observe(ref.current);
+    elementos?.forEach((element, index) => observer.observe(element[index].current))
   }, []);
 
   return { isVisible, ref };
