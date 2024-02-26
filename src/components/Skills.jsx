@@ -16,7 +16,7 @@ import styles from './lazyLoad.module.css'
 
 const Skills = () => {
 
-  const { isVisible, ref } = useLazyLoad()
+  const { isVisible, refOneSingleElement: ref } = useLazyLoad()
 
   return (
     <div

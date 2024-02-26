@@ -1,5 +1,5 @@
 .lazyLoad {
-  animation: lazy-load 800ms linear 0s;
+  animation: lazy-load 1s linear 0s;
   animation-iteration-count: 1; /* defaulgt value */
   transition: all 1s;
   filter: blur(0px);

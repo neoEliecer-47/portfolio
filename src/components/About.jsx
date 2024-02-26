@@ -6,10 +6,11 @@ import styles from "./styles/scrollbar.module.css";
 
 import aboutStyles from "./About.module.css";
 import { useLazyLoad } from "../hooks/useLazyLoad";
-import DarkModeUI from "./ui/DarkModeUI";
+
 
 const About = () => {
-  const { isVisible, ref } = useLazyLoad();
+  const projectData = null
+  const { isVisible, refOneSingleElement: ref } = useLazyLoad();
 
   return (
     <div
