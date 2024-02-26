@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, createRef } from "react";
 export function useLazyLoad(projectData = null) {
   const [isVisible, setIsVisible] = useState(false);
-  
+
   const refMultipleElements = useRef([]);
   const refOneSingleElement = useRef(null);
   let elementos = [];
@@ -26,12 +26,12 @@ export function useLazyLoad(projectData = null) {
     //   elementos?.forEach((element, index) =>
     //     observer.observe(element[index].current)
     //   );
-     
+
     // }
-    if(refOneSingleElement.current) {
+    if (refOneSingleElement.current) {
       //it was giving error because at the beggining the ref is null
-      console.log("here");
-      observer.observe(refOneSingleElement.current)
+
+      observer.observe(refOneSingleElement.current);
     }
 
     return () => {

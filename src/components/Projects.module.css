@@ -40,6 +40,6 @@
     transform: translateX(0px);
     opacity: 1;
     filter: blur(0px);
-    ilter: grayscale(0%);
+    filter: grayscale(0%);
   }
 }
