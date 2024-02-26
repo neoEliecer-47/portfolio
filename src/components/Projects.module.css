@@ -10,14 +10,14 @@
   from {
     transform: translateX(200px);
     opacity: 0;
-    filter: blur(10px);
+    filter: blur(15px);
     filter: grayscale(50%);
   }
   to {
     transform: translateX(0px);
     opacity: 1;
     filter: blur(0px);
-    ilter: grayscale(0%);
+    filter: grayscale(30%);
   }
 }
 
@@ -33,8 +33,8 @@
   from {
     transform: translateX(-200px);
     opacity: 0;
-    filter: blur(10px);
-    filter: grayscale(50%);
+    filter: blur(15px);
+    filter: grayscale(30%);
   }
   to {
     transform: translateX(0px);
