@@ -12,6 +12,8 @@ const CardProject = ({
   subtitle = null,
   urlRepo,
   urlDemo,
+  animationOne = null,
+  animationTwo = null
 }) => {
   const { isVisible, refOneSingleElement: ref } = useLazyLoad();
 
@@ -20,7 +22,7 @@ const CardProject = ({
       ref={ref}
       className={classNames(
         "bg-[#f1f1f1] relative overflow-hidden group shadow-xl shadow-gray-500 hover:shadow-2xl items-center rounded-lg",
-        isVisible && styles.lazyLoad
+        isVisible ? animationOne || animationTwo : ""
       )}
     >
       <img

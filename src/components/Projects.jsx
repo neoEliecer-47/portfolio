@@ -78,15 +78,17 @@ const projectsData = [
 ];
 
 const Projects = () => {
-  const { isVisible: visible1, refMultipleElements: ref1 } = useLazyLoad(projectsData);
-  const { isVisible: visible2, refMultipleElements: ref2 } = useLazyLoad(projectsData);
-
+  const { isVisible: visible1, refMultipleElements: ref1 } =
+    useLazyLoad(projectsData);
+  const { isVisible: visible2, refMultipleElements: ref2 } =
+    useLazyLoad(projectsData);
+//CREATE A LOOP (MAYBE A FOR) TO PASS THROUGHT PROPS CSS CLASSES EVERY 3 ELEMENTS FROM THE DATA
   return (
     <>
       <div
         className="py-6 px-4 grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 lg:max-w-[1080px] lg:mx-auto"
         id="projets"
-        key={''}
+        key={""}
       >
         {projectsData.length > 0 &&
           projectsData
@@ -101,8 +103,8 @@ const Projects = () => {
                 icons,
                 urlRepo,
                 urlDemo,
-              }, index) => (
-                <div  >
+              }) => (
+                <div>
                   <CardProject
                     key={id}
                     img={img}
@@ -112,8 +114,7 @@ const Projects = () => {
                     subtitle={subtitle}
                     urlRepo={urlRepo}
                     urlDemo={urlDemo}
-                    
-                    
+                    animationOne={styles.lazyLoad}
                   />
                 </div>
               )
@@ -131,7 +132,7 @@ const Projects = () => {
                 icons,
                 urlRepo,
                 urlDemo,
-              }, index) => (
+              }) => (
                 <div>
                   <CardProject
                     key={id}
@@ -142,6 +143,7 @@ const Projects = () => {
                     subtitle={subtitle}
                     urlRepo={urlRepo}
                     urlDemo={urlDemo}
+                    animationTwo={styles.lazyLoad2}
                   />
                 </div>
               )
