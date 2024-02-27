@@ -2,16 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-
+body{
+    overflow-anchor: none;
+    scroll-behavior: auto;
+}
 
 body::-webkit-scrollbar{
     width: 10px;
     background-color: azure;
-}::-webkit-scrollbar-track {
+}
+body::-webkit-scrollbar-track {
     border: 0.4rem solid burlywood;
     border-radius: 1.5rem;
 }
-::-webkit-scrollbar-thumb {
+
+body::-webkit-scrollbar-thumb {
     background-color: blueviolet;
     border-radius: 1.5rem;
 }

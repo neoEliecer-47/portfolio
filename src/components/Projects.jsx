@@ -82,7 +82,7 @@ const Projects = () => {
     useLazyLoad(projectsData);
   const { isVisible: visible2, refMultipleElements: ref2 } =
     useLazyLoad(projectsData);
-//CREATE A LOOP (MAYBE A FOR) TO PASS THROUGHT PROPS CSS CLASSES EVERY 3 ELEMENTS FROM THE DATA
+  //CREATE A LOOP (MAYBE A FOR) TO PASS THROUGHT PROPS CSS CLASSES EVERY 3 ELEMENTS FROM THE DATA
   return (
     <>
       <div
@@ -104,19 +104,17 @@ const Projects = () => {
                 urlRepo,
                 urlDemo,
               }) => (
-                <div>
-                  <CardProject
-                    key={id}
-                    img={img}
-                    name={name}
-                    feature={features}
-                    icon={icons}
-                    subtitle={subtitle}
-                    urlRepo={urlRepo}
-                    urlDemo={urlDemo}
-                    animationOne={styles.lazyLoad}
-                  />
-                </div>
+                <CardProject
+                  key={id}
+                  img={img}
+                  name={name}
+                  feature={features}
+                  icon={icons}
+                  subtitle={subtitle}
+                  urlRepo={urlRepo}
+                  urlDemo={urlDemo}
+                  animationOne={styles.lazyLoad}
+                />
               )
             )}
         {projectsData.length > 0 &&
@@ -133,19 +131,17 @@ const Projects = () => {
                 urlRepo,
                 urlDemo,
               }) => (
-                <div>
-                  <CardProject
-                    key={id}
-                    img={img}
-                    name={name}
-                    feature={features}
-                    icon={icons}
-                    subtitle={subtitle}
-                    urlRepo={urlRepo}
-                    urlDemo={urlDemo}
-                    animationTwo={styles.lazyLoad2}
-                  />
-                </div>
+                <CardProject
+                  key={id}
+                  img={img}
+                  name={name}
+                  feature={features}
+                  icon={icons}
+                  subtitle={subtitle}
+                  urlRepo={urlRepo}
+                  urlDemo={urlDemo}
+                  animationTwo={styles.lazyLoad2}
+                />
               )
             )}
       </div>

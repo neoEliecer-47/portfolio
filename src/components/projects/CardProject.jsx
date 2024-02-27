@@ -2,7 +2,7 @@ import githubIcon from "../../assets/card-icon/github2.png";
 import demo from "../../assets/card-icon/demo2.png";
 import { useLazyLoad } from "../../hooks/useLazyLoad";
 import classNames from "classnames";
-import styles from '../Projects.module.css'
+
 
 const CardProject = ({
   img,
@@ -13,22 +13,22 @@ const CardProject = ({
   urlRepo,
   urlDemo,
   animationOne = null,
-  animationTwo = null
+  animationTwo = null,
 }) => {
-  const { isVisible, refOneSingleElement: ref } = useLazyLoad();
+  //const { isVisible, refOneSingleElement: ref } = useLazyLoad();
 
   return (
     <section
-      ref={ref}
+      
       className={classNames(
         "bg-[#f1f1f1] relative overflow-hidden group shadow-xl shadow-gray-500 hover:shadow-2xl items-center rounded-lg",
-        isVisible ? animationOne || animationTwo : ""
+        false ? animationOne || animationTwo : ""
       )}
     >
       <img
         src={img}
         alt={name}
-        className="rounded-lg h-56 group-hover:blur-[2px] transition-all duration-200 ease-out w-full object-cover"
+        className="rounded-lg h-56 group-hover:blur-[2px] transition-all duration-200 ease-out w-full object-cover aspect-auto"
       />
       <div className="inset-0 absolute p-4 grid grid-cols-2 justify-end bg-black/60 opacity-0 scale-110 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200 ease-out">
         <article className="flex flex-col">

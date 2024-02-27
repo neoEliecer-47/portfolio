@@ -7,21 +7,20 @@ import styles from "./styles/scrollbar.module.css";
 import aboutStyles from "./About.module.css";
 import { useLazyLoad } from "../hooks/useLazyLoad";
 
-
 const About = () => {
-  const projectData = null
-  const { isVisible, refOneSingleElement: ref } = useLazyLoad();
+
+  //const { isVisible, refOneSingleElement: ref } = useLazyLoad();
 
   return (
     <div
       className={classNames(
         "w-[22rem] flex flex-col dark:bg-black/50 dark:hover:bg-black/35 dark:text-white/85 bg-gray-100 border-t-[3px] border-blue-500 md:border-green-400 lg:border-black py-6 px-4 mx-4 rounded-lg md:w-[350px] md:mx-auto md:hover:bg-blue-50 shadow-lg hover:shadow-blue-300 md:hover:shadow-gray-400 transition-all duration-700 delay-500 mb-[0.8rem]",
         `${
-          isVisible ? aboutStyles.lazyLoad : ""
+          false ? aboutStyles.lazyLoad : ""
         }` /*el estado esta haciendo que se vuelva a renderizar cada vez que hay un cambio por ende se vuelve a ejecutar el observer en el useEffect*/
       )}
       id="about"
-      ref={ref}
+    
     >
       <div
         className="grid gap-2 w-[19.5rem] h-44 md:h-44"
@@ -30,7 +29,7 @@ const About = () => {
         <img
           src={myphoto}
           alt=""
-          className="h-[190px] w-32 md:h-[175px] md:w-[8.2em]  rounded-tl-lg"
+          className="h-[190px] w-32 md:h-[175px] md:w-[8.2em] rounded-tl-lg"
         />
         <section
           className={classNames(
@@ -54,6 +53,7 @@ const About = () => {
           "flex mt-6 md:mt-4 gap-2 p-1 items-center justify-center bg-blue-400 dark:bg-blue-500 text-sm md:text-base dark:hover:bg-violet-600 rounded-bl-lg rounded-br-lg hover:bg-violet-500 text-white w-full",
           aboutStyles.buttonCv
         )}
+        style={{overflowAnchor: "none"}}
       >
         <a href={cvpdf} className="flex gap-2 font-bold" target="_blank">
           CV

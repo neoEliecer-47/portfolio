@@ -16,13 +16,13 @@ import styles from './lazyLoad.module.css'
 
 const Skills = () => {
 
-  const { isVisible, refOneSingleElement: ref } = useLazyLoad()
+  //const { isVisible, refOneSingleElement: ref } = useLazyLoad()
 
   return (
     <div
-      className={classNames("flex flex-col md:flex-row md:max-w-[940px] md:mx-auto gap-1 mx-4", `${isVisible && styles.skills}`)}
+      className={classNames("flex flex-col items-center md:items-stretch md:flex-row md:max-w-[940px] md:mx-auto gap-1 mx-4", `${false && styles.skills}`)}
       id="skills"
-      ref={ref}
+      
       
     >
       <div className=" border-4 px-12 py-6 bg-blue-500 relative overflow-hidden group shadow-xl shadow-gray-500 hover:shadow-2xl items-center rounded-full">
@@ -73,7 +73,7 @@ const Skills = () => {
         <div className="border-4 px-11 md:px-24 py-6 group rounded-full relative overflow-hidden">
           <div className="h-2 bg-blue-300 absolute inset-0 transition-all duration-500 ease-out group-hover:h-full"></div>
           <span className="relative text-blue-400 group-hover:text-white">
-            <h2 className="text-center">Backend</h2>
+            <h2 className="text-center dark:text-white">Backend</h2>
             <figure className="flex gap-1 items-center justify-center">
               <img
                 src={nodejs}
