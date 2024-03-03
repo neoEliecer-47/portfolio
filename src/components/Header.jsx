@@ -1,29 +1,66 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-scroll";
 import ModalMobile from "./ModalMobile";
 import MenuIcon from "../assets/icons/MenuIcon";
-import eLogo from "../assets/personal/ehover.png";
 import DarkModeUI from "./ui/DarkModeUI";
+import classNames from "classnames";
+import styles from "./Header.module.css";
 
 const Header = () => {
   const [modal, setModal] = useState(false);
-  
-  return (
-    <div style={{overflowAnchor: "none"}} className='relative flex justify-between gap-2 py-5 px-4  bg-black/80 md:bg-[url("./assets/bg/wp9109672.jpg")] md:bg-cover md:bg-center'>
-      <section className="hidden md:flex md:items-center md:justify-center rounded-[10em] m-0 ">
-        <DarkModeUI />
-      </section>
-      <div className="md:hidden flex justify-between items-center w-full">
-        <button
-          onClick={() => setModal(!modal)}
-          className="h-[2.3rem] w-9 relative rounded-lg flex items-center justify-center hover:bg-blue-500 duration-500 p-1 bg-blue-400 md:hidden"
-        >
-          <MenuIcon />
+  const [isVisible, setIsVisible] = useState(true);
 
-          <ModalMobile modal={modal} setModal={setModal} />
-        </button>
-        <DarkModeUI />
-      </div>
+  useEffect(() => {
+    window.addEventListener("scroll", listenToScroll);
+    return () => window.removeEventListener("scroll", listenToScroll);
+  }, []);
+
+  function listenToScroll() {
+    let heightToHideFrom = 150;
+    const winScroll =
+      document.body.scrollTop || document.documentElement.scrollTop;
+
+    if (winScroll > heightToHideFrom) {
+      isVisible && // to limit setting state only the first time
+        setIsVisible(false);
+    } else {
+      setIsVisible(true);
+    }
+  }
+
+  return (
+    <div
+      className={classNames(
+        "z-20 fixed w-full gap-2 py-5 px-4  bg-black/45 md:bg-[url('./assets/bg/wp9109672.jpg')] md:bg-cover md:bg-center transition-all duration-700 dark:bg-black/35 dark:backdrop-invert",
+        isVisible && styles.header,
+        !isVisible && styles.headerScroll
+      )}
+    >
+      
+        <section 
+          className={classNames(
+            "hidden w-full md:flex md:items-center md:justify-center rounded-[10em] m-0",
+            
+          )}
+        >
+          <DarkModeUI />
+        </section>
+        <div style={{transition: 'all 1s', display: `${isVisible && ''}`}} className={classNames("relative md:hidden w-full justify-between items-center", !isVisible && styles.darkModeContainer)}>
+          {isVisible && (
+            <button
+              onClick={() => setModal(!modal)}
+              className="h-[2.3rem] w-9 relative rounded-lg flex items-center justify-center hover:bg-blue-500 duration-500 p-1 bg-blue-400 md:hidden"
+            >
+              <MenuIcon />
+
+              <ModalMobile modal={modal} setModal={setModal} />
+            </button>
+          )}
+          <div className="absolute -top-2 left-60">
+          <DarkModeUI />
+          </div>
+        </div>
+      
       <section className="hidden md:flex bg-blue-400 py-2 px-4 rounded-lg bg-opacity-40 items-center">
         <Link
           to="projets"

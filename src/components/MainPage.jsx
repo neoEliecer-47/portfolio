@@ -44,10 +44,10 @@ const Main = () => {
   ];
 
   return (
-    <div style={{overflowAnchor: "none"}} className="bg-white/35 dark:bg-black/85 flex flex-col gap-2 items-center font-bold justify-center my-6 pb-5  mt-[2.2rem] transition-all duration-700 ease-in">
+    <div style={{overflowAnchor: "none"}} className="h-[100vh] bg-white/35 dark:bg-black/85 flex flex-col gap-2 items-center font-bold justify-center  pb-5   transition-all duration-700 ease-in">
       <section
         className={classNames(
-          "dark:text-white/90 flex items-center justify-center mt-8 text-xl md:text-3xl lg:text-5xl gap-[6px] tracking-widest font-extrabold",
+          "dark:text-white/90 flex items-center justify-center mt-8 text-xl md:text-3xl lg:text-7xl gap-[6px] tracking-widest font-extrabold",
           styles.wrapperRB
         )}
       >

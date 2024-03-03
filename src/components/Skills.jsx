@@ -10,7 +10,7 @@ import postgreLogo from "../assets/logos/postgree.png";
 import tailwindLogo from "../assets/some-skills/tailwind.png";
 import java from '../assets/some-skills/java.png'
 import nodejs from '../assets/logos/nodejs.png'
-import { useLazyLoad } from "../hooks/useLazyLoad";
+
 import classNames from "classnames";
 import styles from './lazyLoad.module.css'
 
