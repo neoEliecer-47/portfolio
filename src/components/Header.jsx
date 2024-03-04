@@ -31,7 +31,7 @@ const Header = () => {
   return (
     <div
       className={classNames(
-        "z-20 fixed w-full gap-2 py-5 px-4  bg-black/45 md:bg-[url('./assets/bg/wp9109672.jpg')] md:bg-cover md:bg-center transition-all duration-700 dark:bg-black/35 dark:backdrop-invert",
+        `z-20 fixed w-full md:flex justify-between gap-2 py-5 px-4  bg-black/45 ${isVisible && "md:bg-[url('./assets/bg/wp9109672.jpg')]"} md:bg-cover md:bg-center transition-all duration-700 dark:bg-black/35 dark:backdrop-invert`,
         isVisible && styles.header,
         !isVisible && styles.headerScroll
       )}
@@ -39,7 +39,7 @@ const Header = () => {
       
         <section 
           className={classNames(
-            "hidden w-full md:flex md:items-center md:justify-center rounded-[10em] m-0",
+            "hidden w-full md:flex md:items-center md:justify-start rounded-[10em] m-0",
             
           )}
         >
@@ -49,46 +49,50 @@ const Header = () => {
           {isVisible && (
             <button
               onClick={() => setModal(!modal)}
-              className="h-[2.3rem] w-9 relative rounded-lg flex items-center justify-center hover:bg-blue-500 duration-500 p-1 bg-blue-400 md:hidden"
+              className="h-[2.3rem] w-9 relative rounded-lg flex items-center justify-center dark:hover:bg-black/35 hover:bg-blue-500 duration-500 p-1 bg-blue-950 md:hidden"
             >
               <MenuIcon />
 
               <ModalMobile modal={modal} setModal={setModal} />
             </button>
           )}
-          <div className="absolute -top-2 left-60">
-          <DarkModeUI />
+          <div className={styles.containerDM}>
+            <DarkModeUI />
           </div>
         </div>
       
-      <section className="hidden md:flex bg-blue-400 py-2 px-4 rounded-lg bg-opacity-40 items-center">
-        <Link
-          to="projets"
-          className="cursor-pointer rounded-tl-lg rounded-bl-lg hover:bg-white py-2 px-4 duration-500 text-white font-bold hover:text-gray-800"
-          smooth={true}
-          duration={700}
-        >
-          Projets
-        </Link>
-
-        <Link
-          to="skills"
-          className="cursor-pointer hover:bg-white py-2 px-4 duration-500 text-white font-bold hover:text-gray-800"
-          smooth={true}
-          duration={700}
-        >
-          Skills
-        </Link>
-
-        <Link
-          to="contact"
-          className="cursor-pointer rounded-tr-lg rounded-br-lg hover:bg-white py-2 px-4 duration-500 text-white font-bold hover:text-gray-800"
-          smooth={true}
-          duration={700}
-        >
-          Contact
-        </Link>
-      </section>
+            {
+              isVisible && (
+                <section className="hidden md:flex bg-blue-400 py-2 px-4 rounded-lg bg-opacity-40 items-center">
+                <Link
+                  to="projets"
+                  className="cursor-pointer rounded-tl-lg rounded-bl-lg hover:bg-white py-2 px-4 duration-500 text-white font-bold hover:text-gray-800"
+                  smooth={true}
+                  duration={700}
+                >
+                  Projets
+                </Link>
+        
+                <Link
+                  to="skills"
+                  className="cursor-pointer hover:bg-white py-2 px-4 duration-500 text-white font-bold hover:text-gray-800"
+                  smooth={true}
+                  duration={700}
+                >
+                  Skills
+                </Link>
+        
+                <Link
+                  to="contact"
+                  className="cursor-pointer rounded-tr-lg rounded-br-lg hover:bg-white py-2 px-4 duration-500 text-white font-bold hover:text-gray-800"
+                  smooth={true}
+                  duration={700}
+                >
+                  Contact
+                </Link>
+              </section>
+              )
+            }
     </div>
   );
 };

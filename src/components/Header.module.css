@@ -1,37 +1,68 @@
-.header{
-    backdrop-filter: blur(5px);
-   
-    transition: all 700ms linear;
-    height: 4.5rem;
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.headerScroll{
-    height: 2rem;
-    justify-content: flex-start;
-    
-}
-
-.darkModeContainer{
-    
+.header {
+  backdrop-filter: blur(5px);
     transition: all 1s;
-    transition-timing-function: linear;
-    transition-delay: 500ms;
-    /* transform: translateX(-100px); */
-    display: flex;
-    width: 20%;
-   transform: translateX(-240px);
-    
+  transition: all 700ms linear;
+  height: 4.5rem;
+  display: flex;
+  justify-content: space-between;
 }
 
-.containerMenuDarkMode{
-    display: grid;
-    grid-template-columns: 2fr 2fr;
-    justify-content: space-between;
-    width: 100%;
-    transition: all 2s;
-    transition-timing-function: linear;
-    height: 4.5rem;
+.headerScroll {
+  height: 2rem;
+  backdrop-filter: blur(5px);
 }
+
+.darkModeContainer {
+  transition: all 1s;
+  transition-timing-function: linear;
+  transition-delay: 500ms;
+  /* transform: translateX(-100px); */
+  display: flex;
+  width: 20%;
+  transform: translateX(-240px);
+}
+
+.containerMenuDarkMode {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  justify-content: space-between;
+  width: 100%;
+  transition: all 2s;
+  transition-timing-function: linear;
+  height: 4.5rem;
+}
+
+.containerDM {
+  position: absolute;
+  top: -0.5rem;
+  left: 14.5rem;
+}
+
+@media screen and (min-width: 425px) {
+  .containerDM {
+    left: 18rem;
+  }
+}
+
+@media screen and (min-width: 390px) and (max-width: 409px) {
+  .containerDM {
+    left: 15.5rem;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 389px) {
+  .containerDM {
+    left: 14.5rem;
+  }
+}
+@media screen and (min-width: 360px) and (max-width: 374px){
+  .containerDM {
+    left: 13.5rem;
+  }
+}
+@media screen and (min-width: 410px) and (max-width: 424px){
+  .containerDM {
+    left: 17rem;
+  }
+}
+
