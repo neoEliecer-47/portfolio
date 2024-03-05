@@ -39,8 +39,8 @@ const Header = () => {
       
         <section 
           className={classNames(
-            "hidden w-full md:flex md:items-center md:justify-start rounded-[10em] m-0",
-            
+            "hidden w-full md:flex md:items-center md:justify-start rounded-[10em] m-0 transition-all duration-500",
+            !isVisible && "mt-[1.3rem]"
           )}
         >
           <DarkModeUI />

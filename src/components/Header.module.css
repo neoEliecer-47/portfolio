@@ -3,13 +3,12 @@
     transition: all 1s;
   transition: all 700ms linear;
   height: 4.5rem;
-  display: flex;
-  justify-content: space-between;
+
 }
 
 .headerScroll {
   height: 2rem;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(2px);
 }
 
 .darkModeContainer {
