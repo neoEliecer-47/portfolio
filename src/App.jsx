@@ -20,7 +20,7 @@ const app = () => {
     >
       <Header />
       <Main />
-      <section className="flex items-center justify-center">
+      <section className=" h-[100vh]" id="about">
         <About />
       </section>
       <Projects />
