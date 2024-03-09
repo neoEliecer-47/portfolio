@@ -45,3 +45,7 @@
     ilter: grayscale(0%);
   }
 }
+
+.text:hover {
+  transform: sca;
+}

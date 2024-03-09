@@ -7,14 +7,17 @@ import styles from "./styles/scrollbar.module.css";
 import aboutStyles from "./About.module.css";
 import { useLazyLoad } from "../hooks/useLazyLoad";
 import React from "react";
+import Accordion from "./interface/Accordion/Accordion";
 
 const About = () => {
   const { isVisible, refOneSingleElement: ref } = useLazyLoad();
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2">
-      <aside className="flex items-center justify-center underline p-2">
-        <h1>text1</h1>
+      <aside className="flex items-center justify-center ml-24 m-0 p-0">
+        <h1 className="md:text-xl font-semibold border-b-[6px] border-orange-500 border-opacity-0 hover:border-opacity-50 transition-all duration-500">
+          About Me
+        </h1>
       </aside>
 
       <div
@@ -41,7 +44,7 @@ const About = () => {
               styles.scrollAbout
             )}
           >
-            <p className={"text-sm md:text-md text-start p-3 "}>
+            <p className2={"text-sm md:text-md text-start p-3 "}>
               I am Eliecer, passionate about coding and technologies. 2+ Years
               of experience in the web development industry which I handle good
               logic and several years in develpment world since my beginnings.
@@ -65,10 +68,21 @@ const About = () => {
           </a>
         </button>
       </div>
-      <aside>text2</aside>
-      <aside>
-        <div className="p-2 bg-green-500 my-5 w-full"></div>
-        <div className="p-2 bg-green-500 my-5 w-full"></div>
+      <aside className="md:flex items-center justify-center m-0 p-0 h-12">
+        <h1 className="md:ml-24 md:text-xl font-semibold border-b-[6px] border-orange-500 border-opacity-0 hover:border-opacity-50 transition-all duration-500">
+          Education and Relevant Experience
+        </h1>
+      </aside>
+      <aside className="h-[10rem]">
+        <Accordion summary={"Bachelor's Degree"} subtitle="Institute of Technology 'Antonio Jose de Sucre (2014 - 2019)'">
+          I graduated bla bla bla
+        </Accordion>
+        <Accordion summary={"Bachelor's Degree"} subtitle="Institute of Technology 'Antonio Jose de Sucre (2014 - 2019)'">
+          I graduated bla bla bla
+        </Accordion>
+        <Accordion summary={"Bachelor's Degree"} subtitle="Institute of Technology 'Antonio Jose de Sucre (2014 - 2019)'">
+          I graduated bla bla bla
+        </Accordion>
       </aside>
     </div>
   );
