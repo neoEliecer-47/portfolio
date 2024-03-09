@@ -13,7 +13,7 @@ const app = () => {
   return (
     <div
       className={classNames(
-        "min-h-screen w-full flex flex-col bg-[#e0e0e5] dark:bg-black/60 transition-all duration-700",
+        "min-h-screen w-full flex flex-col bg-[#e0e0e5] dark:bg-black/60 transition-all duration-700 overflow-y-hidden",
         styles.scroll
       )}
       style={{overflowAnchor: "none", scrollBehavior: "auto"}}
