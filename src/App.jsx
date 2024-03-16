@@ -13,14 +13,14 @@ const app = () => {
   return (
     <div
       className={classNames(
-        "min-h-screen w-full flex flex-col bg-[#e0e0e5] dark:bg-black/60 transition-all duration-700 overflow-y-hidden",
+        "w-full flex flex-col bg-[#e0e0e5] dark:bg-black/60 transition-all duration-700 overflow-y-hidden z-[999999999999999]",
         styles.scroll
       )}
       style={{overflowAnchor: "none", scrollBehavior: "auto"}}
     >
       <Header />
       <Main />
-      <section className=" h-[100vh]" id="about">
+      <section className=" h-full" id="about">
         <About />
       </section>
       <Projects />

@@ -11,29 +11,31 @@ const Accordion = ({ summary, children, subtitle }) => {
   }
   return (
     <section className={styles.container} onClick={handleActiveAcordion}>
-      <div   className={styles.containerTitle}>
+      <div className={styles.containerTitle}>
         <summary className={styles.summary}>{summary}</summary>
         <AccordionArrow className={classNames(styles.arrow, !hiddenContent && styles.arrwAnimation)} stroke={5}/>
       </div>
       <div
         className={classNames(
           styles.content,
-          !hiddenContent ? styles.contentActive : ""
+          !hiddenContent ? styles.contentActive : styles.contentUnactive
         )}
         onClick={!hiddenContent ? handleActiveAcordion : ''}
+        
       >
         <span
           style={{
             display: `${hiddenContent ? "none" : ""}`,
             transition: "all 700ms linear ease-out",
+            fontWeight: '600'
           }}
         >
-          {subtitle}//este span es el problema
+          {subtitle}
         </span>
         <p
           style={{
             display: `${hiddenContent ? "none" : ""}`,
-            transition: "all 600ms linear ease-out",
+            transition: "all 600ms linear",
           }}
           className={styles.parrafo}
         >

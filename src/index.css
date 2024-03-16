@@ -4,7 +4,7 @@
 
 body{
     overflow-anchor: none;
-    scroll-behavior: auto;
+    scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar{

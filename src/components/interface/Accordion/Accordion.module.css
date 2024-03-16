@@ -1,28 +1,32 @@
-.containerTitle{
-    display: flex;
-    justify-content: space-between;
-    cursor: pointer;
+.containerTitle {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
 }
 
 .container {
-    margin: 1rem 0;
-    cursor: pointer;
+  margin: 1rem 0;
+  cursor: pointer;
 
-    height: auto;
- 
 }
 .content {
-  transition: all 500ms;
+  transition: all 400ms ease-in-out;
   margin: 0;
   padding: 0;
   height: 0;
 }
 
 .contentActive {
+  transition: height 400ms ease-in-out;
   background-color: aquamarine;
   cursor: pointer;
-  height: 4rem;
+  height: 5.5rem;
 }
+
+/* .contentUnactive{
+  transition: height 400ms ease-in-out;
+  animation: slideUp 300ms linear;
+} */
 
 .summary {
   background-color: beige;
@@ -30,6 +34,7 @@
   padding: 0 0.5rem;
   cursor: pointer;
   height: auto;
+  font-weight: 700;
 }
 
 .arrow {
@@ -37,7 +42,7 @@
   height: 1.5rem;
   transition: all 750ms;
   background-color: white;
-  opacity: .8;
+  opacity: 0.8;
   padding: 0 5px;
 }
 
@@ -46,10 +51,27 @@
 }
 
 .parrafo {
-  
   padding: 0;
   margin: 0;
 }
 
 
 
+
+/* @keyframes slideDown {
+  from {
+    height: 0;
+  }
+  to {
+    height: auto;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    height: auto;
+  }
+  to {
+    height: 0;
+  }
+} */
