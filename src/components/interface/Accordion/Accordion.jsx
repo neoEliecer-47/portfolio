@@ -5,12 +5,12 @@ import AccordionArrow from "./AccordionArrow";
 
 const Accordion = ({ summary, children, subtitle }) => {
   const [hiddenContent, setHiddenContent] = useState(true);
-
+ 
   function handleActiveAcordion() {
     return setHiddenContent(!hiddenContent);
   }
   return (
-    <section className={styles.container} onClick={handleActiveAcordion}>
+    <section className={classNames(styles.container, "lg:w-[25rem] gap-3 m-auto")} onClick={handleActiveAcordion}>
       <div className={styles.containerTitle}>
         <summary className={styles.summary}>{summary}</summary>
         <AccordionArrow className={classNames(styles.arrow, !hiddenContent && styles.arrwAnimation)} stroke={5}/>
@@ -19,6 +19,7 @@ const Accordion = ({ summary, children, subtitle }) => {
         className={classNames(
           styles.content,
           !hiddenContent ? styles.contentActive : styles.contentUnactive
+  
         )}
         onClick={!hiddenContent ? handleActiveAcordion : ''}
         

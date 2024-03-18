@@ -13,7 +13,7 @@ const About = () => {
   const { isVisible, refOneSingleElement: ref } = useLazyLoad();
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 h-full">
+    <div className="md:grid flex flex-col justify-center items-center md:grid-cols-2 h-full lg:mx-[7rem] mb-[13rem]">
       <aside className="flex items-center justify-center ml-24 m-0 p-0 h-full">
         <h1 className="md:text-xl font-semibold border-b-[6px] border-orange-500 border-opacity-0 hover:border-opacity-50 transition-all duration-500">
           About Me
@@ -22,7 +22,7 @@ const About = () => {
 
       <div
         className={classNames(
-          "h-[15rem] md:h-[18rem] w-[22rem] md:w-[25rem] flex flex-col mt-[5rem] dark:bg-black/50 dark:hover:bg-black/35 dark:text-white/85 bg-gray-100 border-t-[3px] border-blue-500 md:border-green-400 lg:border-black py-6 px-4 mx-4 rounded-lg md:mx-auto md:hover:bg-blue-50 shadow-lg hover:shadow-blue-300 md:hover:shadow-gray-400 transition-all duration-700 delay-500 mb-[0.8rem] ",
+          " h-[15rem] md:h-[17rem] w-[22rem] md:w-[25rem] flex flex-col mt-[5rem] dark:bg-black/50 dark:hover:bg-black/35 dark:text-white/85 bg-gray-100 border-t-[3px] border-blue-500 md:border-green-400 lg:border-black py-6 px-4 mx-4 md:mx-0 rounded-lg lg:mx-auto md:hover:bg-blue-50 shadow-lg hover:shadow-blue-300 md:hover:shadow-gray-400 transition-all duration-700 delay-500 mb-[3rem] ",
           `${
             isVisible ? aboutStyles.lazyLoad : ""
           }` /*el estado esta haciendo que se vuelva a renderizar cada vez que hay un cambio por ende se vuelve a ejecutar el observer en el useEffect*/
@@ -30,7 +30,7 @@ const About = () => {
         ref={ref}
       >
         <div
-          className="grid gap-2 w-[19.5rem] md:w-[23.6rem] h-full md:h-44"
+          className="grid gap-2 w-[19.5rem] md:w-[23.6rem] h-44 md:h-44"
           style={{ gridTemplateColumns: "1fr 1fr" }}
         >
           <img
@@ -44,7 +44,7 @@ const About = () => {
               styles.scrollAbout
             )}
           >
-            <p className2={"text-sm md:text-md text-start p-3 "}>
+            <p className="inline-block text-sm md:text-md pr-3">
               I am Eliecer, passionate about coding and technologies. 2+ Years
               of experience in the web development industry which I handle good
               logic and several years in develpment world since my beginnings.
@@ -57,7 +57,7 @@ const About = () => {
         </div>
         <button
           className={classNames(
-            "flex mt-6 md:mt-4 gap-2 p-1 items-center justify-center bg-blue-400 dark:bg-blue-500 text-sm md:text-base dark:hover:bg-violet-600 rounded-bl-lg rounded-br-lg hover:bg-violet-500 text-white w-full",
+            "flex md:mt-4 gap-2 p-1 items-center justify-center bg-blue-400 dark:bg-blue-500 text-sm md:text-base dark:hover:bg-violet-600 rounded-bl-lg rounded-br-lg hover:bg-violet-500 text-white w-full",
             aboutStyles.buttonCv
           )}
           style={{ overflowAnchor: "none" }}
@@ -68,12 +68,12 @@ const About = () => {
           </a>
         </button>
       </div>
-      <aside className="md:flex items-center justify-center my-8 p-0 h-full">
+      <aside className="md:flex items-center justify-center m-0 p-0 h-full">
         <h1 className="md:ml-24 md:text-xl font-semibold border-b-[6px] border-orange-500 border-opacity-0 hover:border-opacity-50 transition-all duration-500">
           Education and Relevant Experience
         </h1>
       </aside>
-      <aside className="h-full">
+      <aside className="h-full flex justify-start items-start flex-col gap-3">
         <Accordion
           summary={"Bachelor's Degree"}
           subtitle="Institute of Technology 'Antonio Jose de Sucre (2014 - 2019)'"
