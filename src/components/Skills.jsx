@@ -13,10 +13,12 @@ import nodejs from '../assets/logos/nodejs.png'
 
 import classNames from "classnames";
 import styles from './lazyLoad.module.css'
+import { useLazyLoad } from "../hooks/useLazyLoad";
 
 const Skills = () => {
 
-  //const { isVisible, refOneSingleElement: ref } = useLazyLoad()
+  const { isVisible, refOneSingleElement: ref } = useLazyLoad()
+  const { isVisible: isVisible2, refOneSingleElement: ref2 } = useLazyLoad()
 
   return (
     <div
@@ -25,7 +27,7 @@ const Skills = () => {
       
       
     >
-      <div className=" border-4 px-12 py-6 bg-blue-500 relative overflow-hidden group shadow-xl shadow-gray-500 hover:shadow-2xl items-center rounded-full">
+      <div ref={ref} className={classNames("border-4 px-12 py-6 bg-blue-500 relative overflow-hidden group shadow-xl shadow-gray-500 hover:shadow-2xl items-center rounded-full", isVisible && 'animate-horizontal-bounce')}>
         <h1 className="text-white font-bold text-center text-sm">
           Technologies which I have also worked with:
         </h1>
@@ -68,8 +70,8 @@ const Skills = () => {
           />
         </article>
       </div>
-
-      <section className="flex mx-4">
+      
+      <section ref={ref2} className={classNames("flex mx-4", isVisible2 && 'animate-bounce-fade-in')}>
         <div className="border-4 px-11 md:px-24 py-6 group rounded-full relative overflow-hidden">
           <div className="h-2 bg-blue-300 absolute inset-0 transition-all duration-500 ease-out group-hover:h-full"></div>
           <span className="relative text-blue-400 group-hover:text-white">

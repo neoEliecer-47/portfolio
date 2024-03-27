@@ -3,7 +3,6 @@ import demo from "../../assets/card-icon/demo2.png";
 import { useLazyLoad } from "../../hooks/useLazyLoad";
 import classNames from "classnames";
 
-
 const CardProject = ({
   img,
   name,
@@ -12,18 +11,17 @@ const CardProject = ({
   subtitle = null,
   urlRepo,
   urlDemo,
-  animationOne = null,
-  animationTwo = null,
+  animation = null,
 }) => {
-  //const { isVisible, refOneSingleElement: ref } = useLazyLoad();
+  const { isVisible, refOneSingleElement: ref } = useLazyLoad();
 
   return (
     <section
-      
       className={classNames(
-        "bg-[#f1f1f1] relative h-full overflow-hidden group shadow-xl shadow-gray-500 hover:shadow-2xl items-center rounded-lg",
-        false ? animationOne || animationTwo : ""
+        " bg-[#f1f1f1] relative h-full overflow-hidden group shadow-xl shadow-gray-500 hover:shadow-2xl items-center rounded-lg",
+        isVisible && animation
       )}
+      ref={ref}
     >
       <img
         src={img}

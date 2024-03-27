@@ -12,7 +12,6 @@ import nodejsLogo from "../assets/logos/nodejs.png";
 import expressLogo from "../assets/logos/express.png";
 import mongoLogo from "../assets/logos/mongo4.png";
 
-import styles from "./Projects.module.css";
 import { useLazyLoad } from "../hooks/useLazyLoad";
 
 const projectsData = [
@@ -78,72 +77,44 @@ const projectsData = [
 ];
 
 const Projects = () => {
-  const { isVisible: visible1, refMultipleElements: ref1 } =
-    useLazyLoad(projectsData);
-  const { isVisible: visible2, refMultipleElements: ref2 } =
-    useLazyLoad(projectsData);
   //CREATE A LOOP (MAYBE A FOR) TO PASS THROUGHT PROPS CSS CLASSES EVERY 3 ELEMENTS FROM THE DATA
+
+  function buildAnimationCards(id) {
+    if (id <= 2) return "animate-fade-in-right";
+    else if (id <= 5) return "animate-fade-in-left";
+    return "animate-fade-in-down";
+  }
   return (
     <>
       <div
         className="h-full py-6 px-4 grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 lg:max-w-[1080px] lg:mx-auto"
         id="projets"
-       
       >
         {projectsData.length > 0 &&
-          projectsData
-            .slice(0, 3)
-            .map(
-              ({
-                id,
-                img,
-                name,
-                subtitle,
-                features,
-                icons,
-                urlRepo,
-                urlDemo,
-              }) => (
-                <CardProject
-                  key={id}
-                  img={img}
-                  name={name}
-                  feature={features}
-                  icon={icons}
-                  subtitle={subtitle}
-                  urlRepo={urlRepo}
-                  urlDemo={urlDemo}
-                  animationOne={styles.lazyLoad}
-                />
-              )
-            )}
-        {projectsData.length > 0 &&
-          projectsData
-            .slice(3, 6)
-            .map(
-              ({
-                id,
-                img,
-                name,
-                subtitle,
-                features,
-                icons,
-                urlRepo,
-                urlDemo,
-              }) => (
-                <CardProject
-                  key={id}
-                  img={img}
-                  name={name}
-                  feature={features}
-                  icon={icons}
-                  subtitle={subtitle}
-                  urlRepo={urlRepo}
-                  urlDemo={urlDemo}
-                  animationTwo={styles.lazyLoad2}
-                />
-              )
-            )}
+          projectsData.map(
+            ({
+              id,
+              img,
+              name,
+              subtitle,
+              features,
+              icons,
+              urlRepo,
+              urlDemo,
+            }) => (
+              <CardProject
+                key={id}
+                img={img}
+                name={name}
+                feature={features}
+                icon={icons}
+                subtitle={subtitle}
+                urlRepo={urlRepo}
+                urlDemo={urlDemo}
+                animation={buildAnimationCards(id)}
+              />
+            )
+          )}
       </div>
     </>
   );

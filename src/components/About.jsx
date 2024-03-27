@@ -3,7 +3,7 @@ import myphoto from "../assets/personal/new-portfolio-photo1.jpg";
 import cvlogo from "../assets/personal/cvicon.png";
 import cvpdf from "../cv/CV-DEV-ES1.pdf";
 import styles from "./styles/scrollbar.module.css";
-
+import animations from "@midudev/tailwind-animations";
 import aboutStyles from "./About.module.css";
 import { useLazyLoad } from "../hooks/useLazyLoad";
 import React from "react";
@@ -11,11 +11,25 @@ import Accordion from "./interface/Accordion/Accordion";
 
 const About = () => {
   const { isVisible, refOneSingleElement: ref } = useLazyLoad();
+  const { isVisible: isVisible2, refOneSingleElement: ref2 } = useLazyLoad();
+  const { isVisible:isVisible3, refOneSingleElement: ref3 } = useLazyLoad();
+  const { isVisible: isVisible4, refOneSingleElement: ref4 } = useLazyLoad();
 
   return (
-    <div className="md:grid flex flex-col justify-center items-center md:grid-cols-2 h-full lg:mx-[7rem] mb-[13rem]">
-      <aside className="flex items-center justify-center ml-24 m-0 p-0 h-full">
-        <h1 className="md:text-xl font-semibold border-b-[6px] border-orange-500 border-opacity-0 hover:border-opacity-50 transition-all duration-500">
+    <div className=" md:grid flex flex-col justify-center items-center md:grid-cols-2 h-full lg:mx-[7rem] mb-[13rem]">
+      <aside
+        className={classNames(
+          "flex items-center justify-center ml-24 m-0 p-0 h-full",
+          
+        )}
+      >
+        <h1
+          className={classNames(
+            "md:text-xl font-semibold border-b-[6px] border-orange-500 border-opacity-0 hover:border-opacity-50 transition-all duration-500",
+            isVisible && "animate-fade-in-left"
+          )}
+          ref={ref}
+        >
           About Me
         </h1>
       </aside>
@@ -24,10 +38,10 @@ const About = () => {
         className={classNames(
           " h-[15rem] md:h-[17rem] w-[22rem] md:w-[25rem] flex flex-col mt-[5rem] dark:bg-black/50 dark:hover:bg-black/35 dark:text-white/85 bg-gray-100 border-t-[3px] border-blue-500 md:border-green-400 lg:border-black py-6 px-4 mx-4 md:mx-0 rounded-lg lg:mx-auto md:hover:bg-blue-50 shadow-lg hover:shadow-blue-300 md:hover:shadow-gray-400 transition-all duration-700 delay-500 mb-[3rem] ",
           `${
-            isVisible ? aboutStyles.lazyLoad : ""
+            isVisible2 && "animate-bounce-fade-in"
           }` /*el estado esta haciendo que se vuelva a renderizar cada vez que hay un cambio por ende se vuelve a ejecutar el observer en el useEffect*/
         )}
-        ref={ref}
+        ref={ref2}
       >
         <div
           className="grid gap-2 w-[19.5rem] md:w-[23.6rem] h-44 md:h-44"
@@ -68,17 +82,30 @@ const About = () => {
           </a>
         </button>
       </div>
-      <aside className="md:flex items-center justify-center m-0 p-0 h-full">
-        <h1 className="md:ml-24 md:text-xl font-semibold border-b-[6px] border-orange-500 border-opacity-0 hover:border-opacity-50 transition-all duration-500">
+      <aside className="md:flex items-center justify-center m-0 p-0 h-full animate-zoom-in">
+        <h1
+          className={classNames(
+            "md:ml-24 md:text-xl font-semibold border-b-[6px] border-orange-500 border-opacity-0 hover:border-opacity-50 transition-all duration-500",
+            isVisible3 && "animate-fade-in-right"
+          )}
+          ref={ref3}
+        >
           Education and Relevant Experience
         </h1>
       </aside>
-      <aside className="h-full flex justify-start items-start flex-col gap-3">
+      <aside
+        className={classNames(
+          "h-full flex justify-start items-start flex-col gap-3",
+          isVisible4 && "animate-fade-in-up"
+        )}
+        ref={ref4}
+      >
         <Accordion
           summary={"Bachelor's Degree"}
           subtitle="Institute of Technology 'Antonio Jose de Sucre (2014 - 2019)'"
         >
-         Graduated in computer science where I started my world in coding with languages such as C, Java and database. 
+          Graduated in computer science where I started my world in coding with
+          languages such as C, Java and database.
         </Accordion>
         <Accordion
           summary={"Frontend Developer"}
