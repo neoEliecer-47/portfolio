@@ -12,20 +12,19 @@ import Accordion from "./interface/Accordion/Accordion";
 const About = () => {
   const { isVisible, refOneSingleElement: ref } = useLazyLoad();
   const { isVisible: isVisible2, refOneSingleElement: ref2 } = useLazyLoad();
-  const { isVisible:isVisible3, refOneSingleElement: ref3 } = useLazyLoad();
+  const { isVisible: isVisible3, refOneSingleElement: ref3 } = useLazyLoad();
   const { isVisible: isVisible4, refOneSingleElement: ref4 } = useLazyLoad();
 
   return (
-    <div className=" md:grid flex flex-col justify-center items-center md:grid-cols-2 h-full lg:mx-[7rem] mb-[13rem]">
+    <div className=" md:grid flex flex-col justify-center items-center md:grid-cols-2 h-full lg:mx-[7rem] md:mb-[13rem] mb-[3rem]">
       <aside
         className={classNames(
-          "flex items-center justify-center ml-24 m-0 p-0 h-full",
-          
+          "flex items-center justify-center md:ml-24 m-0 p-0 h-full w-full"
         )}
       >
         <h1
           className={classNames(
-            "md:text-xl font-semibold border-b-[6px] border-orange-500 border-opacity-0 hover:border-opacity-50 transition-all duration-500",
+            "p-4 text-lg md:p-0 md:text-xl font-semibold border-b-[6px] border-orange-500 border-opacity-0 hover:border-opacity-50 transition-all duration-500",
             isVisible && "animate-fade-in-left"
           )}
           ref={ref}
@@ -36,7 +35,7 @@ const About = () => {
 
       <div
         className={classNames(
-          " h-[15rem] md:h-[17rem] w-[22rem] md:w-[25rem] flex flex-col mt-[5rem] dark:bg-black/50 dark:hover:bg-black/35 dark:text-white/85 bg-gray-100 border-t-[3px] border-blue-500 md:border-green-400 lg:border-black py-6 px-4 mx-4 md:mx-0 rounded-lg lg:mx-auto md:hover:bg-blue-50 shadow-lg hover:shadow-blue-300 md:hover:shadow-gray-400 transition-all duration-700 delay-500 mb-[3rem] ",
+          " h-[15rem] md:h-[17rem] w-[22rem] md:w-[25rem] flex flex-col md:mt-[5rem] dark:bg-black/50 dark:hover:bg-black/35 dark:text-white/85 bg-gray-100 border-t-[3px] border-blue-500 md:border-green-400 lg:border-black py-6 px-4 mx-4 md:mx-0 rounded-lg lg:mx-auto md:hover:bg-blue-50 shadow-lg hover:shadow-blue-300 md:hover:shadow-gray-400 transition-all duration-700 delay-500 md:mb-[3rem] ",
           `${
             isVisible2 && "animate-bounce-fade-in"
           }` /*el estado esta haciendo que se vuelva a renderizar cada vez que hay un cambio por ende se vuelve a ejecutar el observer en el useEffect*/
@@ -85,7 +84,7 @@ const About = () => {
       <aside className="md:flex items-center justify-center m-0 p-0 h-full animate-zoom-in">
         <h1
           className={classNames(
-            "md:ml-24 md:text-xl font-semibold border-b-[6px] border-orange-500 border-opacity-0 hover:border-opacity-50 transition-all duration-500",
+            "text-lg p-5 md:p-0 md:ml-24 md:text-xl font-semibold border-b-[6px] border-orange-500 border-opacity-0 hover:border-opacity-50 transition-all duration-500",
             isVisible3 && "animate-fade-in-right"
           )}
           ref={ref3}
@@ -95,7 +94,7 @@ const About = () => {
       </aside>
       <aside
         className={classNames(
-          "h-full flex justify-start items-start flex-col gap-3",
+          "h-full flex justify-start items-start flex-col gap-3 px-4 w-full",
           isVisible4 && "animate-fade-in-up"
         )}
         ref={ref4}

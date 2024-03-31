@@ -7,7 +7,7 @@
 .container {
   margin: 1rem 0;
   cursor: pointer;
-
+  width: 100%;
 }
 .content {
   transition: all 400ms ease-in-out;
@@ -20,7 +20,7 @@
   transition: height 400ms ease-in-out;
   background-color: aquamarine;
   cursor: pointer;
-  height: 5.5rem;
+  height: 7.5rem;
 }
 
 /* .contentUnactive{
