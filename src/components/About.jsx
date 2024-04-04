@@ -16,7 +16,7 @@ const About = () => {
   const { isVisible: isVisible4, refOneSingleElement: ref4 } = useLazyLoad();
 
   return (
-    <div className=" md:grid flex flex-col justify-center items-center md:grid-cols-2 h-full lg:mx-[7rem] md:mb-[13rem] mb-[2rem]">
+    <div className=" md:grid flex flex-col justify-center items-center md:grid-cols-2 h-full lg:mx-[7rem] md:mb-[8rem] mb-[2rem]">
       <aside
         className={classNames(
           "flex items-center justify-center md:ml-24 m-0 p-0 h-full w-full"
