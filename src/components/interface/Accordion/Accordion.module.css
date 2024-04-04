@@ -18,9 +18,8 @@
 
 .contentActive {
   transition: height 400ms ease-in-out;
-  background-color: aquamarine;
+
   cursor: pointer;
-  height: 7.5rem;
 }
 
 /* .contentUnactive{
@@ -29,7 +28,7 @@
 } */
 
 .summary {
-  background-color: beige;
+  
   width: 100%;
   padding: 0 0.5rem;
   cursor: pointer;
@@ -54,9 +53,6 @@
   padding: 0;
   margin: 0;
 }
-
-
-
 
 /* @keyframes slideDown {
   from {

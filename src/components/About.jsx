@@ -102,21 +102,24 @@ const About = () => {
         <Accordion
           summary={"Bachelor's Degree"}
           subtitle="Institute of Technology 'Antonio Jose de Sucre (2014 - 2019)'"
+          height={8}
         >
           Graduated in computer science where I started my world in coding with
           languages such as C, Java and database.
         </Accordion>
         <Accordion
           summary={"Frontend Developer"}
-          subtitle="Institute of Technology 'Antonio Jose de Sucre (2014 - 2019)'"
+          subtitle="Kanon Gaming Limited"
+          height={6.7}
         >
-          I graduated bla bla bla
+          Frontend developer in iGaming industry in Malta where I had the opportunity to work with JavaSciript, React, Nextjs and CSS
         </Accordion>
         <Accordion
-          summary={"Freelancer FullStack Developer"}
-          subtitle="Institute of Technology 'Antonio Jose de Sucre (2014 - 2019)'"
+          summary={"Freelancer JavaScript Developer"}
+          subtitle="Alimentos El Tunal"
+          height={6.3}
         >
-          I graduated bla bla bla
+          I have Worked on some projects as a Freelancer, mostly on the frontend with JavaScript and React but also with Nodejs
         </Accordion>
       </aside>
     </div>
