@@ -16,7 +16,7 @@ const About = () => {
   const { isVisible: isVisible4, refOneSingleElement: ref4 } = useLazyLoad();
 
   return (
-    <div className=" md:grid flex flex-col justify-center items-center md:grid-cols-2 h-full lg:mx-[7rem] md:mb-[13rem] mb-[3rem]">
+    <div className=" md:grid flex flex-col justify-center items-center md:grid-cols-2 h-full lg:mx-[7rem] md:mb-[13rem] mb-[2rem]">
       <aside
         className={classNames(
           "flex items-center justify-center md:ml-24 m-0 p-0 h-full w-full"
@@ -24,7 +24,7 @@ const About = () => {
       >
         <h1
           className={classNames(
-            "p-4 text-lg md:p-0 md:text-xl font-semibold border-b-[6px] border-orange-500 border-opacity-0 hover:border-opacity-50 transition-all duration-500",
+            "dark:text-white p-4 text-lg md:p-0 md:text-xl font-semibold border-b-[6px] border-orange-500 border-opacity-0 hover:border-opacity-50 transition-all duration-500",
             isVisible && "animate-fade-in-left"
           )}
           ref={ref}
@@ -35,7 +35,7 @@ const About = () => {
 
       <div
         className={classNames(
-          " h-[15rem] md:h-[17rem] w-[22rem] md:w-[25rem] flex flex-col md:mt-[5rem] dark:bg-black/50 dark:hover:bg-black/35 dark:text-white/85 bg-gray-100 border-t-[3px] border-blue-500 md:border-green-400 lg:border-black py-6 px-4 mx-4 md:mx-0 rounded-lg lg:mx-auto md:hover:bg-blue-50 shadow-lg hover:shadow-blue-300 md:hover:shadow-gray-400 transition-all duration-700 delay-500 md:mb-[3rem] ",
+          " md:h-[17rem] h-[18rem] w-[22rem] md:w-[25rem] flex flex-col md:mt-[5rem] dark:bg-black/50 dark:hover:bg-black/35 dark:text-white/85 bg-gray-100 border-t-[3px] border-blue-500 md:border-green-400 lg:border-black py-6 px-4 mx-4 md:mx-0 rounded-lg lg:mx-auto md:hover:bg-blue-50 shadow-lg hover:shadow-blue-300 md:hover:shadow-gray-400 transition-all duration-700 delay-500 md:mb-[3rem] ",
           `${
             isVisible2 && "animate-bounce-fade-in"
           }` /*el estado esta haciendo que se vuelva a renderizar cada vez que hay un cambio por ende se vuelve a ejecutar el observer en el useEffect*/
@@ -70,7 +70,7 @@ const About = () => {
         </div>
         <button
           className={classNames(
-            "flex md:mt-4 gap-2 p-1 items-center justify-center bg-blue-400 dark:bg-blue-500 text-sm md:text-base dark:hover:bg-violet-600 rounded-bl-lg rounded-br-lg hover:bg-violet-500 text-white w-full",
+            "flex mt-[1.80rem] md:mt-4 gap-2 p-1 items-center justify-center bg-blue-400 dark:bg-blue-500 text-sm md:text-base dark:hover:bg-violet-600 rounded-bl-lg rounded-br-lg hover:bg-violet-500 text-white w-full",
             aboutStyles.buttonCv
           )}
           style={{ overflowAnchor: "none" }}
@@ -81,10 +81,10 @@ const About = () => {
           </a>
         </button>
       </div>
-      <aside className="md:flex items-center justify-center m-0 p-0 h-full animate-zoom-in">
+      <aside className="md:flex items-center justify-center m-0 p-0 h-full">
         <h1
           className={classNames(
-            "text-lg p-5 md:p-0 md:ml-24 md:text-xl font-semibold border-b-[6px] border-orange-500 border-opacity-0 hover:border-opacity-50 transition-all duration-500",
+            "text-lg dark:text-white p-5 md:p-0 md:ml-24 md:text-xl font-semibold border-b-[6px] border-orange-500 border-opacity-0 hover:border-opacity-50 transition-all duration-500",
             isVisible3 && "animate-fade-in-right"
           )}
           ref={ref3}

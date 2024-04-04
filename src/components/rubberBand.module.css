@@ -6,14 +6,18 @@
       sans-serif;
   }
 
-  .word{
+  .word {
     font-size: 5rem;
   }
 }
 
+@media screen and (min-width: 1500px) {
+  .word {
+    font-size: 20rem;
+  }
+}
 
-
-.word{
+.word {
   font-size: 3rem;
   height: 100%;
 }
@@ -21,7 +25,6 @@
   cursor: pointer;
   display: inline-block;
   transition: all 400ms ease;
-  
 }
 
 .RB:hover {
