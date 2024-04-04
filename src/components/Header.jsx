@@ -72,7 +72,7 @@ const Header = () => {
         <section className="hidden md:flex bg-blue-400 py-2 px-4 rounded-lg bg-opacity-40 items-center">
           <Link
             to="about"
-            className="cursor-pointer rounded-tr-lg rounded-br-lg hover:bg-white py-2 px-4 duration-500 text-white font-bold hover:text-gray-800"
+            className="cursor-pointer rounded-bl-lg rounded-tl-lg hover:bg-white py-1 px-4 duration-500 text-white font-bold hover:text-gray-800"
             smooth={true}
             duration={700}
           >
@@ -80,7 +80,7 @@ const Header = () => {
           </Link>
           <Link
             to="projets"
-            className="cursor-pointer rounded-tl-lg rounded-bl-lg hover:bg-white py-2 px-4 duration-500 text-white font-bold hover:text-gray-800"
+            className="cursor-pointer hover:bg-white py-1 px-4 duration-500 text-white font-bold hover:text-gray-800"
             smooth={true}
             duration={700}
           >
@@ -89,7 +89,7 @@ const Header = () => {
 
           <Link
             to="skills"
-            className="cursor-pointer hover:bg-white py-2 px-4 duration-500 text-white font-bold hover:text-gray-800"
+            className="cursor-pointer hover:bg-white py-1 px-4 duration-500 text-white font-bold hover:text-gray-800"
             smooth={true}
             duration={700}
           >
@@ -98,7 +98,7 @@ const Header = () => {
 
           <Link
             to="contact"
-            className="cursor-pointer rounded-tr-lg rounded-br-lg hover:bg-white py-2 px-4 duration-500 text-white font-bold hover:text-gray-800"
+            className="cursor-pointer rounded-tr-lg rounded-br-lg hover:bg-white py-1 px-4 duration-500 text-white font-bold hover:text-gray-800"
             smooth={true}
             duration={700}
           >
