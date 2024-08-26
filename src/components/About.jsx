@@ -112,14 +112,16 @@ const About = () => {
           subtitle="Kanon Gaming Limited"
           height={6.7}
         >
-          Frontend developer in iGaming industry in Malta where I had the opportunity to work with JavaSciript, React, Nextjs and CSS
+          Frontend developer in iGaming industry in Malta where I had the
+          opportunity to work with JavaSciript, React, Nextjs and CSS
         </Accordion>
         <Accordion
           summary={"Freelancer JavaScript Developer"}
           subtitle="Alimentos El Tunal"
           height={6.3}
         >
-          I have Worked on some projects as a Freelancer, mostly on the frontend with JavaScript and React but also with Nodejs
+          I have Worked on some projects as a Freelancer, mostly on the frontend
+          with JavaScript and React but also with Nodejs
         </Accordion>
       </aside>
     </div>

@@ -22,13 +22,9 @@
   cursor: pointer;
 }
 
-/* .contentUnactive{
-  transition: height 400ms ease-in-out;
-  animation: slideUp 300ms linear;
-} */
+
 
 .summary {
-  
   width: 100%;
   padding: 0 0.5rem;
   cursor: pointer;
@@ -54,20 +50,3 @@
   margin: 0;
 }
 
-/* @keyframes slideDown {
-  from {
-    height: 0;
-  }
-  to {
-    height: auto;
-  }
-}
-
-@keyframes slideUp {
-  from {
-    height: auto;
-  }
-  to {
-    height: 0;
-  }
-} */
