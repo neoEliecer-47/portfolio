@@ -44,50 +44,61 @@ const Main = () => {
   ];
 
   return (
-    <div className="bg-white/35 dark:bg-black/85 flex flex-col gap-2 items-center font-bold justify-center my-6 pb-5  mt-[2.2rem] transition-all duration-700 ease-in">
+    <div
+      style={{ overflowAnchor: "none" }}
+      className="h-[100vh] bg-white/35 dark:bg-black/85 flex flex-col gap-2 items-center font-bold justify-center  pb-5   transition-all duration-700 ease-in"
+    >
       <section
         className={classNames(
-          "dark:text-white/90 flex items-center justify-center mt-8 text-xl md:text-3xl lg:text-5xl gap-[6px] tracking-widest font-extrabold",
+          "dark:text-white/90 mb-16 flex flex-col md:flex-row items-center justify-center mt-8 text-xl md:text-3xl lg:text-7xl gap-[1rem] md:gap-2 tracking-widest font-extrabold",
           styles.wrapperRB
         )}
       >
-        <span style={h2Style} className={styles.RB}>
-          F
-        </span>
-        <span style={h2Style} className={styles.RB}>
-          r
-        </span>
-        <span style={h2Style} className={styles.RB}>
-          o
-        </span>
-        <span style={h2Style} className={styles.RB}>
-          n
-        </span>
-        <span style={h2Style} className={styles.RB}>
-          t
-        </span>
-        <span style={h2Style} className={styles.RB}>
-          e
-        </span>
-        <span style={h2Style} className={styles.RB}>
-          n
-        </span>
-        <span
-          style={h2Style}
-          className={classNames("mr-[0.8rem] md:mr-[1.2rem]", styles.RB)}
-        >
-          d
-        </span>
+        <div className="m-0 p-0">
+          <span style={h2Style} className={classNames(styles.RB, styles.word)}>
+            F
+          </span>
+          <span style={h2Style} className={classNames(styles.RB, styles.word)}>
+            r
+          </span>
+          <span style={h2Style} className={classNames(styles.RB, styles.word)}>
+            o
+          </span>
+          <span style={h2Style} className={classNames(styles.RB, styles.word)}>
+            n
+          </span>
+          <span style={h2Style} className={classNames(styles.RB, styles.word)}>
+            t
+          </span>
+          <span style={h2Style} className={classNames(styles.RB, styles.word)}>
+            e
+          </span>
+          <span style={h2Style} className={classNames(styles.RB, styles.word)}>
+            n
+          </span>
+          <span
+            style={h2Style}
+            className={classNames(
+              "mr-[0.8rem] md:mr-[1.2rem]",
+              styles.RB,
+              styles.word
+            )}
+          >
+            d
+          </span>
+        </div>
 
-        <span className={styles.RB}>D</span>
-        <span className={styles.RB}>e</span>
-        <span className={styles.RB}>v</span>
-        <span className={styles.RB}>e</span>
-        <span className={styles.RB}>l</span>
-        <span className={styles.RB}>o</span>
-        <span className={styles.RB}>p</span>
-        <span className={styles.RB}>e</span>
-        <span className={styles.RB}>r</span>
+        <div className="m-0 p-0">
+          <span className={classNames(styles.RB, styles.word)}>D</span>
+          <span className={classNames(styles.RB, styles.word)}>e</span>
+          <span className={classNames(styles.RB, styles.word)}>v</span>
+          <span className={classNames(styles.RB, styles.word)}>e</span>
+          <span className={classNames(styles.RB, styles.word)}>l</span>
+          <span className={classNames(styles.RB, styles.word)}>o</span>
+          <span className={classNames(styles.RB, styles.word)}>p</span>
+          <span className={classNames(styles.RB, styles.word)}>e</span>
+          <span className={classNames(styles.RB, styles.word)}>r</span>
+        </div>
       </section>
       <NameAnimation words={words} />
       <div className="bg-gray-100 group relative overflow-hidden py-2 px-6 mt-14 rounded-lg">

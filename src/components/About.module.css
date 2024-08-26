@@ -9,7 +9,7 @@
   animation-iteration-count: infinite;
   animation-delay: 0.3s; */
 
-  width: 21rem;
+  width: 24rem;
   transform: translateX(-10px);
 }
 
@@ -44,4 +44,8 @@
     filter: blur(0px);
     ilter: grayscale(0%);
   }
+}
+
+.text:hover {
+  transform: sca;
 }

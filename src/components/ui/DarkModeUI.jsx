@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 import classNames from "classnames";
 
 const initialStateDarkMode =
-  localStorage.getItem("theme") === "dark" ? true : false;
+  localStorage.getItem("theme") === "light" ? false : true;
 
 const DarkModeUI = () => {
   const [darkMode, setDarkMode] = useState(initialStateDarkMode);

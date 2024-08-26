@@ -22,12 +22,19 @@ const Modal = ({ setModal, modal }) => {
       )}
     >
       <CloseIcon onClick={() => setModal(false)} />
-
+      <Link
+        to="about"
+        smooth={true}
+        duration={700}
+        className="dark:bg-white/85 font-semibold mt-8 p-2 bg-white rounded-tl-lg rounded-tr-lg md:hover:bg-blue-500 hover:text-white duration-500 mx-4"
+      >
+        About
+      </Link>
       <Link
         to="projets"
         smooth={true}
         duration={700}
-        className="dark:bg-white/85 font-semibold mt-10 p-2 bg-white rounded-tl-lg rounded-tr-lg md:hover:bg-blue-500 hover:text-white duration-500 mx-4"
+        className="dark:bg-white/85 font-semibold p-2 bg-white md:hover:bg-blue-500 hover:text-white duration-500 mx-4"
       >
         Projects
       </Link>

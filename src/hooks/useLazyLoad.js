@@ -41,7 +41,7 @@ export function useLazyLoad(projectData = null) {
         //so we can remove the observer from the component not to leave it mounted
       }
     };
-  }, [refOneSingleElement, refMultipleElements]);
+  }, []);
 
   return { isVisible, refMultipleElements, refOneSingleElement };
 }

@@ -5,6 +5,21 @@
       Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
       sans-serif;
   }
+
+  .word {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .word {
+    font-size: 20rem;
+  }
+}
+
+.word {
+  font-size: 3rem;
+  height: 100%;
 }
 .RB {
   cursor: pointer;
