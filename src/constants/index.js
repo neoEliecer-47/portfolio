@@ -4,7 +4,9 @@ import apiRestImg from "../assets/projects/apirest.jpg";
 import dallEclone from "../assets/projects/dall-e-clone.jpg";
 import chatWs from "../assets/projects/chatws.jpg";
 import airbnbClone from "../assets/projects/airbnb-clone.jpg";
-
+import typescriptLogo from "../assets/some-skills/typescript.png";
+import cssLogo from "../assets/some-skills/css-logo.png"
+import nextjsLogo from "../assets/logos/next-logo.png";
 import reactLogo from "../assets/logos/reactjs2.png";
 import tailwindLogo from "../assets/some-skills/tailwind.png";
 import nodejsLogo from "../assets/logos/nodejs.png";
@@ -17,8 +19,8 @@ export const projectsData = [
     img: carHub,
     name: "Car Hub",
     subitle: "",
-    features: ["Drag and drop", "Dark mode", "Task filtering"],
-    icons: [reactLogo, tailwindLogo],
+    features: ["Pagination", "Car filtering", 'Responsive'],
+    icons: [nextjsLogo, cssLogo, typescriptLogo],
     urlRepo: "https://github.com/neoEliecer-47/concessionaire-app",
     urlDemo: "https://concessionaire-app.vercel.app/",
   },

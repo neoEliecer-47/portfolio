@@ -54,7 +54,7 @@ const Main = () => {
           styles.wrapperRB
         )}
       >
-        <div className="m-0 p-0">
+        <div className={classNames("m-0 p-0", styles.bounceFirstAnimation)}>
           <span style={h2Style} className={classNames(styles.RB, styles.word)}>
             F
           </span>

@@ -32,6 +32,12 @@
   animation-fill-mode: both;
 }
 
+.bounceFirstAnimation {
+  animation: bounceFirst 2.5s;
+  animation-fill-mode: both;
+  transition: transform 2.5s ease;
+}
+
 @keyframes rubber-band {
   0% {
     transform: scale3d(1, 1, 1);
@@ -53,5 +59,20 @@
   }
   100% {
     transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes bounceFirst {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }

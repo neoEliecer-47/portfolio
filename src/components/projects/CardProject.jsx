@@ -2,6 +2,7 @@ import githubIcon from "../../assets/card-icon/github2.png";
 import demo from "../../assets/card-icon/demo2.png";
 import { useLazyLoad } from "../../hooks/useLazyLoad";
 import classNames from "classnames";
+import TechIconProject from "../TechIconProject";
 
 const CardProject = ({
   img,
@@ -45,25 +46,17 @@ const CardProject = ({
         </article>
 
         <article className="text-white flex flex-col items-end gap-3">
-          <div className="flex gap-1">
-            <img src={icon[0]} alt="" className="h-6 w-6" />
-            <img src={icon[1]} alt="" className="h-6 w-6" />
-            {icon.length > 2 && (
-              <img src={icon[2]} alt="" className="h-6 w-6" />
-            )}
-            {icon.length > 3 && (
-              <img src={icon[3]} alt="" className="h-6 w-6" />
-            )}
-            {icon.length > 4 && (
-              <img src={icon[4]} alt="" className="h-6 w-6" />
-            )}
+          <div className="flex gap-1 bg-white/20 p-1 rounded-lg">
+            {icon.map((icon, index) => (
+              <TechIconProject key={index} iconSrc={icon} />
+            ))}
           </div>
-          <div className="flex justify-end mt-20">
-            <a href={urlRepo} className="cursor-pointer" target="_blanck">
-              <img src={githubIcon} alt="" className="" />
+          <div className="flex mt-20 gap-0">
+            <a href={urlRepo} className="cursor-pointer " target="_blanck">
+              <img src={githubIcon} alt="" className="p-0 m-0" />
             </a>
-            <a href={urlDemo} className="cursor-pointer" target="_blanck">
-              <img src={demo} alt="" className="" />
+            <a href={urlDemo} className="cursor-pointer " target="_blanck">
+              <img src={demo} alt="" className="p-0 m-0" />
             </a>
           </div>
         </article>

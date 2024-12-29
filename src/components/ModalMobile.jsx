@@ -1,10 +1,25 @@
 import { Link } from "react-scroll";
 import CloseIcon from "../assets/icons/CloseIcon";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import classNames from "classnames";
+
 
 const Modal = ({ setModal, modal }) => {
   const refModal = useRef(null);
+
+
+  function handleCLickOutside(event) {
+    if (refModal.current && !refModal.current.contains(event.target)) {
+      setModal(false);
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener("mousedown", handleCLickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleCLickOutside);
+    };
+  }, []);
 
   if (modal) {
     setTimeout(() => {
