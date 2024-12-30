@@ -3,20 +3,22 @@ import myphoto from "../assets/personal/new-portfolio-photo1.jpg";
 import cvlogo from "../assets/personal/cvicon.png";
 import cvpdf from "../cv/DEV-CV-DEC-1.pdf";
 import styles from "./styles/scrollbar.module.css";
-import animations from "@midudev/tailwind-animations";
+
 import aboutStyles from "./About.module.css";
 import { useLazyLoad } from "../hooks/useLazyLoad";
 import React from "react";
 import Accordion from "./interface/Accordion/Accordion";
+//import { useLazyLoadelements } from "../hooks/useLazyLoadElements";
 
 const About = () => {
+  //const { elementRef, loaded } = useLazyLoadelements();
   const { isVisible, refOneSingleElement: ref } = useLazyLoad();
-  const { isVisible: isVisible2, refOneSingleElement: ref2 } = useLazyLoad();
+  //const { isVisible: isVisible2, refOneSingleElement: ref2 } = useLazyLoad();
   const { isVisible: isVisible3, refOneSingleElement: ref3 } = useLazyLoad();
   const { isVisible: isVisible4, refOneSingleElement: ref4 } = useLazyLoad();
 
   return (
-    <div className=" md:grid flex flex-col justify-center items-center md:grid-cols-2 h-full lg:mx-[7rem] md:mb-[8rem] mb-[2rem]">
+    <div className="md:grid flex flex-col justify-center items-center md:grid-cols-2 h-full lg:mx-[7rem] md:mb-[8rem] mb-[2rem]">
       <aside
         className={classNames(
           "flex items-center justify-center md:ml-24 m-0 p-0 h-full w-full"
@@ -27,20 +29,19 @@ const About = () => {
             "dark:text-white p-4 text-lg md:p-0 md:text-xl font-semibold border-b-[6px] border-orange-500 border-opacity-0 hover:border-opacity-50 transition-all duration-500",
             isVisible && "animate-fade-in-left"
           )}
-          ref={ref}
         >
           About Me
         </h1>
       </aside>
 
       <div
+          
         className={classNames(
-          " md:h-[17rem] h-[18rem] w-[22rem] md:w-[25rem] flex flex-col md:mt-[5rem] dark:bg-black/50 dark:hover:bg-black/35 dark:text-white/85 bg-gray-100 border-t-[3px] border-blue-500 md:border-green-400 lg:border-black py-6 px-4 mx-4 md:mx-0 rounded-lg lg:mx-auto md:hover:bg-blue-50 shadow-lg hover:shadow-blue-300 md:hover:shadow-gray-400 transition-all duration-700 delay-500 md:mb-[3rem] ",
-          `${
-            isVisible2 && "animate-bounce-fade-in"
-          }` /*el estado esta haciendo que se vuelva a renderizar cada vez que hay un cambio por ende se vuelve a ejecutar el observer en el useEffect*/
+          ` md:h-[17rem] h-[18rem] w-[22rem] md:w-[25rem] flex flex-col md:mt-[5rem] dark:bg-black/50 dark:hover:bg-black/35 dark:text-white/85 bg-gray-100 border-t-[3px] border-blue-500 md:border-green-400 lg:border-black py-6 px-4 mx-4 md:mx-0 rounded-lg lg:mx-auto md:hover:bg-blue-50 shadow-lg hover:shadow-blue-300 md:hover:shadow-gray-400 transition-all duration-500 md:mb-[3rem]`,
+          
+           
+           /*el estado esta haciendo que se vuelva a renderizar cada vez que hay un cambio por ende se vuelve a ejecutar el observer en el useEffect*/
         )}
-        ref={ref2}
       >
         <div
           className="grid gap-2 w-[19.5rem] md:w-[23.6rem] h-44 md:h-44"
@@ -58,13 +59,14 @@ const About = () => {
             )}
           >
             <p className="inline-block text-sm md:text-md pr-3">
-              I am Eliecer, passionate about coding and technologies. 2+ Years
-              of experience in the web development industry which I handle good
-              logic and several years in develpment world since my beginnings.
-              Experience in iGaming industry in europe as a Web Frontend
-              Developer and as a self-taught I keep improving my skills.
-              Experience with Java and Node.js. I like challenges and human
-              quality above all. I like to grow and challenges.
+              Hi, this is Eliecer, passionate about coding and technologies. 2+
+              Years of experience in the web development industry therefore I
+              handle good logic and several years in development world since
+              2018 in my university time. Experience in iGaming industry in
+              europe as a Frontend Developer and as a self-taught I keep
+              improving my skills. Experience with Java and Node.js so so I have
+              a solid foundation in software development. I like challenges and
+              human quality above all. I like to grow and challenges.
             </p>
           </section>
         </div>

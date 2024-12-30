@@ -3,6 +3,7 @@ import demo from "../../assets/card-icon/demo2.png";
 import { useLazyLoad } from "../../hooks/useLazyLoad";
 import classNames from "classnames";
 import TechIconProject from "../TechIconProject";
+import { LazyLoadElements } from "../../hooks/LazyLoadElements";
 
 const CardProject = ({
   img,
@@ -17,6 +18,7 @@ const CardProject = ({
   const { isVisible, refOneSingleElement: ref } = useLazyLoad();
 
   return (
+    <LazyLoadElements>
     <section
       className={classNames(
         " bg-[#f1f1f1] relative h-full overflow-hidden group shadow-xl shadow-gray-500 hover:shadow-2xl items-center rounded-lg",
@@ -62,6 +64,7 @@ const CardProject = ({
         </article>
       </div>
     </section>
+    </LazyLoadElements>
   );
 };
 

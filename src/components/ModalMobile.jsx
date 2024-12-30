@@ -3,10 +3,8 @@ import CloseIcon from "../assets/icons/CloseIcon";
 import { useEffect, useRef } from "react";
 import classNames from "classnames";
 
-
 const Modal = ({ setModal, modal }) => {
   const refModal = useRef(null);
-
 
   function handleCLickOutside(event) {
     if (refModal.current && !refModal.current.contains(event.target)) {
@@ -21,11 +19,7 @@ const Modal = ({ setModal, modal }) => {
     };
   }, []);
 
-  if (modal) {
-    setTimeout(() => {
-      refModal.current.classList.remove("-translate-x-full");
-    }, 20);
-  }
+
 
   return (
     //`${!modal && " "}`

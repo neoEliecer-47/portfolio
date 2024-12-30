@@ -32,7 +32,7 @@ const Main = () => {
   }, [colors.length]);
 
   const words = [
-    "I am Eliecer",
+    "This is Eliecer",
     "Recruiters",
     "Code Enthusiasts",
     "Developers",

@@ -6,7 +6,7 @@ const CloseIcon = () => {
       viewBox="0 0 24 24"
       strokeWidth={1.5}
       stroke="currentColor"
-      className="w-5 h-5 absolute top-0 right-0 hover:rounded-full p-1 hover:bg-white m-1 duration-500"
+      className="w-5 h-5 absolute top-0 right-0 rounded-full p-[0.20rem] bg-white m-1 duration-500"
       
     >
       <path

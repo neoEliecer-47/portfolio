@@ -6,6 +6,7 @@ import Main from "./components/MainPage";
 import Skills from "./components/Skills";
 import classNames from "classnames";
 import styles from "./components/styles/scrollbar.module.css";
+import { LazyLoadElements } from "./hooks/LazyLoadElements";
 
 const app = () => {
   return (
@@ -18,12 +19,16 @@ const app = () => {
     >
       <Header />
       <Main />
-      <section className=" h-full" id="about">
-        <About />
+      <section className="h-full" id="about">
+        <LazyLoadElements>
+          <About />
+        </LazyLoadElements>
       </section>
-      <Projects />
+      
+        <Projects />
+      
       <Skills />
-      ``
+
       <Contact />
     </div>
   );

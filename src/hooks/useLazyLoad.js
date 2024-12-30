@@ -15,7 +15,7 @@ export function useLazyLoad(projectData = null) {
   }
 
   useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver(([entries]) => {
       const entry = entries[0];
 
       setIsVisible(entry.isIntersecting); //its better to do it with only vanilla js in this case, to avoid renders every time the state changes

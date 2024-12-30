@@ -1,5 +1,5 @@
 .caja {
-  transition: all 1.5s ease 1s;
+  transition: transform 1.5s ease 1s;
 }
 
 .caja:hover {

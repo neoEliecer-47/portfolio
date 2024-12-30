@@ -19,7 +19,7 @@ const Projects = () => {
   return (
     <>
       <section className='w-full flex items-center justify-center mb-6'>
-        <h1 ref={refOneSingleElement} className={classNames('text-black dark:text-white text-lg font-semibold', isVisible && 'animate-shake')}>Some projects I have worked on</h1>
+        <h1 ref={refOneSingleElement} className={classNames('text-black dark:text-white text-lg font-semibold')}>Some projects I have worked on</h1>
       </section>
       <div
         className="h-full py-6 px-4 grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 lg:max-w-[1080px] lg:mx-auto"
