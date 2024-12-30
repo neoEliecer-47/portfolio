@@ -1,8 +1,8 @@
 import classNames from "classnames";
 import { useEffect, useRef, useState } from "react";
-import styles from "../hooks/lazyLoad.module.css";
 
-export function LazyLoadElements({ children }) {
+
+export function LazyLoadElements({ children, lazyLoadFrom, lazyLoadTo }) {
   const [loaded, setLoaded] = useState(false);
   const elementRef = useRef();
 
@@ -27,7 +27,7 @@ export function LazyLoadElements({ children }) {
 
   return (
     <div
-      className={classNames(styles.hidden, loaded && styles.visible)}
+      className={classNames(lazyLoadFrom, loaded && lazyLoadTo)}
       ref={elementRef}
     >
       {loaded ? children : null}
