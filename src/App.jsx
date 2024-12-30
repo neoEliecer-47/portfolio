@@ -7,7 +7,7 @@ import Skills from "./components/Skills";
 import classNames from "classnames";
 import styles from "./components/styles/scrollbar.module.css";
 import { LazyLoadElements } from "./hooks/LazyLoadElements";
-import lazyStyles from './hooks/lazyLoadStyles.module.css';
+import lazyStyles from "./hooks/lazyLoadStyles.module.css";
 
 const app = () => {
   return (
@@ -21,14 +21,21 @@ const app = () => {
       <Header />
       <Main />
       <section className="h-full" id="about">
-        <LazyLoadElements lazyLoadFrom={lazyStyles.lazyFromAbout} lazyLoadTo={lazyStyles.lazyToAbout}>
+        <LazyLoadElements
+          lazyLoadFrom={lazyStyles.lazyFromAbout}
+          lazyLoadTo={lazyStyles.lazyToAbout}
+        >
           <About />
         </LazyLoadElements>
       </section>
-      
-        <Projects />
-      
-      <Skills />
+
+      <Projects />
+      <LazyLoadElements
+        lazyLoadFrom={lazyStyles.lazyFromSkills}
+        lazyLoadTo={lazyStyles.lazyToSkills}
+      >
+        <Skills />
+      </LazyLoadElements>
 
       <Contact />
     </div>
