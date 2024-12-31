@@ -1,0 +1,30 @@
+.lazyFromAbout {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 2.3s ease-in, transform 2.3s ease-in;
+}
+
+.lazyToAbout {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.lazyFromProjects {
+  opacity: 0;
+  backdrop-filter: blur(10px);
+  transition: opacity 2.3s ease-in;
+}
+
+.lazyToProjects {
+  opacity: 1;
+  backdrop-filter: blur(0px);
+}
+
+.lazyFromSkills {
+  transform: translateX(200px);
+  transition: transform 200ms linear;
+}
+
+.lazyToSkills {
+  transform: translateX(0);
+}

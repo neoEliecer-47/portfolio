@@ -2,16 +2,6 @@
   transition: all 0.5s ease 0.1s;
 }
 
-.buttonCv:hover {
-  /* animation-name: button-cv;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-delay: 0.3s; */
-
-  width: 24rem;
-  transform: translateX(-10px);
-}
 
 @keyframes button-cv {
   to {
@@ -42,10 +32,23 @@
     transform: translateY(0px);
     opacity: 1;
     filter: blur(0px);
-    ilter: grayscale(0%);
+    filter: grayscale(0%);
   }
 }
 
 .text:hover {
   transform: sca;
+}
+
+
+@media screen and (min-width: 1000px) {
+  .buttonCv:hover {
+    width: 24rem;
+    transform: translateX(-10px);
+  }
+  
+}
+
+.aboutLoaded{
+  opacity: 1;
 }

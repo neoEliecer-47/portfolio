@@ -22,7 +22,7 @@ const Skills = () => {
 
   return (
     <div
-      className={classNames("flex flex-col items-center md:items-stretch md:flex-row md:max-w-[940px] md:mx-auto gap-1 mx-4", `${false && styles.skills}`)}
+      className={classNames("flex flex-col items-center md:items-stretch md:flex-row md:max-w-[940px] md:mx-auto gap-1 mx-4 mt-4", `${false && styles.skills}`)}
       id="skills"
       
       

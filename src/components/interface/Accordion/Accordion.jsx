@@ -1,24 +1,25 @@
 import classNames from "classnames";
-import { useState } from "react";
+import { useRef, useState } from "react";
 import styles from "./Accordion.module.css";
 import AccordionArrow from "./AccordionArrow";
 
 const Accordion = ({ summary, children, subtitle, height }) => {
   const [hiddenContent, setHiddenContent] = useState(true);
+  const accordionRef = useRef(null);
 
-  function handleActiveAcordion() {
+  function handleAccordion() {
     return setHiddenContent(!hiddenContent);
   }
   return (
     <section
       className={classNames(styles.container, "lg:w-[25rem] gap-3 m-auto")}
-      onClick={handleActiveAcordion}
+      onClick={handleAccordion}
     >
       <div className={styles.containerTitle}>
         <summary
           className={classNames(
             styles.summary,
-            "bg-yellow-50 dark:bg-gray-200"
+            "bg-blue-100 dark:bg-gray-200"
           )}
         >
           {summary}
@@ -26,34 +27,35 @@ const Accordion = ({ summary, children, subtitle, height }) => {
         <AccordionArrow
           className={classNames(
             styles.arrow,
-            !hiddenContent && styles.arrwAnimation
+            !hiddenContent && styles.arrwAnimation,
+            'dark:bg-blue-100'
           )}
           stroke={5}
         />
       </div>
       <div
+        ref={accordionRef}
         className={classNames(
           styles.content,
-          !hiddenContent ? styles.contentActive : styles.contentUnactive,
+          !hiddenContent && styles.contentActive,
           "bg-white dark:bg-black/20 dark:text-white"
         )}
-        onClick={!hiddenContent ? handleActiveAcordion : ""}
-        style={{ height: !hiddenContent && `${height}rem` }}
+        onClick={!hiddenContent ? handleAccordion : ""}
+        style={{
+          height: hiddenContent
+            ? "0px"
+            : `${accordionRef.current?.scrollHeight}px`,
+        }}
       >
         <span
-          style={{
-            display: `${hiddenContent ? "none" : "block"}`,
-            transition: "all 700ms linear ease-out",
-            fontWeight: "600",
-          }}
-          className="font-bold mb-2"
+          className="font-bold mb-2 text-[1rem] lg:text-xl p-[0.5rem] m-0 block text-black dark:text-white"
         >
           {subtitle}
         </span>
         <p
           style={{
-            display: `${hiddenContent ? "none" : ""}`,
-            transition: "all 600ms linear",
+            padding: "0.5rem",
+            margin: "0",
           }}
           className={styles.parrafo}
         >

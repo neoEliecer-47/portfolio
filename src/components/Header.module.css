@@ -1,9 +1,8 @@
 .header {
   backdrop-filter: blur(5px);
-    transition: all 1s;
+  transition: all 1s;
   transition: all 700ms linear;
   height: 4.5rem;
-
 }
 
 .headerScroll {
@@ -54,14 +53,13 @@
     left: 14.5rem;
   }
 }
-@media screen and (min-width: 360px) and (max-width: 374px){
+@media screen and (min-width: 360px) and (max-width: 374px) {
   .containerDM {
     left: 13.5rem;
   }
 }
-@media screen and (min-width: 410px) and (max-width: 424px){
+@media screen and (min-width: 410px) and (max-width: 424px) {
   .containerDM {
     left: 17rem;
   }
 }
-
