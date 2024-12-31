@@ -19,8 +19,6 @@ const Modal = ({ setModal, modal }) => {
     };
   }, []);
 
-
-
   return (
     //`${!modal && " "}`
     <div
@@ -29,7 +27,6 @@ const Modal = ({ setModal, modal }) => {
         "absolute dark:backdrop-blur-[10px] shadow-2xl shadow-gray-500 bg-opacity-80 dark:bg-opacity-70  transform -translate-x-full  flex flex-col top-12 -left-[21rem] z-10 md:hidden h-52 rounded-lg w-36  bg-blue-300 dark:bg-blue-800 transition-all duration-500 ease-linear",
         modal && "translate-x-full -left-[9rem]"
       )}
-     
     >
       <CloseIcon onClick={() => setModal(false)} />
       <Link
