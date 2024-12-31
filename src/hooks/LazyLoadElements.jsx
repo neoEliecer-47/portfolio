@@ -15,7 +15,7 @@ export function LazyLoadElements({ children, lazyLoadFrom, lazyLoadTo }) {
           observer.disconnect();
         }
       },
-      { threshold: 0.2 } //it triggers when 10% of the element is visible
+      { threshold: 0.5 } //it triggers when 50% of the element is visible
     );
 
     if (elementRef.current) observer.observe(elementRef.current);

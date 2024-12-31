@@ -26,7 +26,7 @@ const About = () => {
       >
         <h1
           className={classNames(
-            "dark:text-white p-4 text-lg md:p-0 md:text-xl font-semibold border-b-[6px] border-orange-500 border-opacity-0 hover:border-opacity-50 transition-all duration-500",
+            "dark:text-white p-4 text-lg lg:text-2xl md:p-0 md:text-xl font-semibold border-b-[6px] border-orange-500 border-opacity-0 hover:border-opacity-50 transition-all duration-500",
             isVisible && "animate-fade-in-left"
           )}
         >
@@ -86,7 +86,7 @@ const About = () => {
       <aside className="md:flex items-center justify-center m-0 p-0 h-full">
         <h1
           className={classNames(
-            "text-lg dark:text-white p-5 md:p-0 md:ml-24 md:text-xl font-semibold border-b-[6px] border-orange-500 border-opacity-0 hover:border-opacity-50 transition-all duration-500",
+            "text-lg dark:text-white p-5 md:p-0 md:ml-24 md:text-xl lg:text-2xl font-semibold border-b-[6px] border-orange-500 border-opacity-0 hover:border-opacity-50 transition-all duration-500",
             isVisible3 && "animate-fade-in-right"
           )}
           ref={ref3}
@@ -106,24 +106,24 @@ const About = () => {
           subtitle="Institute of Technology 'Antonio Jose de Sucre (2014 - 2019)'"
           height={8}
         >
-          Graduated in computer science where I started my world in coding with
-          languages such as C, Java and database.
+          Graduated in computer science where I started my world in software development with
+          languages such as C, Java and databases.
         </Accordion>
         <Accordion
           summary={"Frontend Developer"}
-          subtitle="Kanon Gaming Limited"
+          subtitle="Kanon Gaming Limited (2023 - 2024)"
           height={6.7}
         >
           Frontend developer in iGaming industry in Malta where I had the
-          opportunity to work with JavaSciript, React, Nextjs and CSS
+          opportunity to work with JavaSciript, React, Nextjs and CSS.
         </Accordion>
         <Accordion
-          summary={"Freelancer JavaScript Developer"}
-          subtitle="Alimentos El Tunal"
+          summary={"Freelance Web Developer"}
+          subtitle="Alimentos El Tunal & Limonbyte (2024)"
           height={6.3}
         >
           I have Worked on some projects as a Freelancer, mostly on the frontend
-          with JavaScript and React but also with Nodejs
+          with JavaScript and React, React Native, Next and TypesCript.
         </Accordion>
       </aside>
     </div>

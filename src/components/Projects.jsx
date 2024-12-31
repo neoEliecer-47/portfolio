@@ -17,9 +17,9 @@ const Projects = () => {
     return "animate-fade-in-down";
   }
   return (
-    <>
+    <div className="h-full w-full p-0 m-0 dark:bg-black/20">
       <section className='w-full flex items-center justify-center mb-6'>
-        <h1 ref={refOneSingleElement} className={classNames('text-black dark:text-white text-lg font-semibold')}>Some projects I have worked on</h1>
+        <h1 ref={refOneSingleElement} className={classNames('text-black dark:text-white text-lg lg:text-2xl font-semibold mt-4 border-b-[6px] border-orange-500 border-opacity-0 hover:border-opacity-50 transition-all duration-500')}>Some projects I have worked on</h1>
       </section>
       <div
         className="h-full py-6 px-4 grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 lg:max-w-[1080px] lg:mx-auto"
@@ -51,7 +51,7 @@ const Projects = () => {
             )
           )}
       </div>
-    </>
+    </div>
   );
 };
 
