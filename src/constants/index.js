@@ -1,4 +1,5 @@
-import carHub from "../assets/projects/car-hub-landing-page.png";
+import carHub from "../assets/projects/car-hub.avif";
+import milyWay from '../assets/projects/solar-system.avif'
 import goSearchImg from "../assets/projects/gosearch.jpg";
 import apiRestImg from "../assets/projects/apirest.jpg";
 import dallEclone from "../assets/projects/dall-e-clone.jpg";
@@ -16,6 +17,15 @@ import mongoLogo from "../assets/logos/mongo4.png";
 export const projectsData = [
   {
     id: 1,
+    img: milyWay,
+    name: "Milky Way Star",
+    features: ["Pure CSS animations", "Responsive","React and TypeScript power"],
+    icons: [reactLogo, cssLogo, typescriptLogo],
+    urlRepo: "https://github.com/neoEliecer-47/milky-way-star",
+    urlDemo: "https://milky-way-star.vercel.app/",
+  },
+  {
+    id: 2,
     img: carHub,
     name: "Car Hub",
     subitle: "",
@@ -25,7 +35,7 @@ export const projectsData = [
     urlDemo: "https://concessionaire-app.vercel.app/",
   },
   {
-    id: 2,
+    id: 3,
     img: goSearchImg,
     name: "GoSearch",
     subtitle: "Search Engine",
@@ -35,7 +45,7 @@ export const projectsData = [
     urlDemo: "https://go-search-react.netlify.app",
   },
   {
-    id: 3,
+    id: 4,
     img: apiRestImg,
     name: "API REST",
     subtitle: "shortlink",
@@ -45,7 +55,7 @@ export const projectsData = [
     urlDemo: "https://api-rest-1.onrender.com/api/v1/links/xbo2eo",
   },
   {
-    id: 4,
+    id: 5,
     img: dallEclone,
     name: "DALL-E",
     subtitle: "clone",
@@ -54,15 +64,7 @@ export const projectsData = [
     urlRepo: "https://github.com/neoEliecer-47/dall-e-clone-mern",
     urlDemo: "https://dall-e-mern-clone.netlify.app",
   },
-  {
-    id: 5,
-    img: chatWs,
-    name: "E-Chat",
-    features: ["Real time", "Web Sockets"],
-    icons: [tailwindLogo, reactLogo, nodejsLogo, expressLogo, mongoLogo],
-    urlRepo: "https://github.com/neoEliecer-47/chat-mern-websocket",
-    urlDemo: "https://chat-mern-ws.netlify.app",
-  },
+  
   {
     id: 6,
     img: airbnbClone,
