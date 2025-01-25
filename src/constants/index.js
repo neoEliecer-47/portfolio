@@ -17,6 +17,15 @@ import mongoLogo from "../assets/logos/mongo4.png";
 export const projectsData = [
   {
     id: 1,
+    img: milyWay,
+    name: "Milky Way Star",
+    features: ["Pure CSS animations", "Responsive","React and TypeScript power"],
+    icons: [reactLogo, cssLogo, typescriptLogo],
+    urlRepo: "https://github.com/neoEliecer-47/milky-way-star",
+    urlDemo: "https://milky-way-star.vercel.app/",
+  },
+  {
+    id: 2,
     img: carHub,
     name: "Car Hub",
     subitle: "",
@@ -24,15 +33,6 @@ export const projectsData = [
     icons: [nextjsLogo, cssLogo, typescriptLogo],
     urlRepo: "https://github.com/neoEliecer-47/concessionaire-app",
     urlDemo: "https://concessionaire-app.vercel.app/",
-  },
-  {
-    id: 2,
-    img: milyWay,
-    name: "Milky Way Star",
-    features: ["Pure CSS animations", "Responsive","React and TypeScript power"],
-    icons: [reactLogo, cssLogo, typescriptLogo],
-    urlRepo: "https://github.com/neoEliecer-47/milky-way-star",
-    urlDemo: "https://milky-way-star.vercel.app/",
   },
   {
     id: 3,
