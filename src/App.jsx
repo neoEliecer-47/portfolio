@@ -16,7 +16,7 @@ const app = () => {
         "w-full flex flex-col bg-[#e0e0e5] dark:bg-black/60 transition-all duration-700 overflow-y-hidden z-[999999999999999]",
         styles.scroll
       )}
-      style={{ overflowAnchor: "none", scrollBehavior: "auto" }}
+        style={{ overflowAnchor: "none", scrollBehavior: "auto" }}
     >
       <Header />
       <Main />
