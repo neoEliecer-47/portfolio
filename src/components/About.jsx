@@ -8,6 +8,7 @@ import aboutStyles from "./About.module.css";
 import { useLazyLoad } from "../hooks/useLazyLoad";
 import React from "react";
 import Accordion from "./interface/Accordion/Accordion";
+import { myContentText } from "../constants";
 //import { useLazyLoadelements } from "../hooks/useLazyLoadElements";
 
 const About = () => {
@@ -35,12 +36,10 @@ const About = () => {
       </aside>
 
       <div
-          
         className={classNames(
-          ` md:h-[17rem] h-[18rem] w-[22rem] md:w-[25rem] flex flex-col md:mt-[5rem] dark:bg-black/50 dark:hover:bg-black/35 dark:text-white/85 bg-gray-100 border-t-[3px] border-blue-500 md:border-green-400 lg:border-black py-6 px-4 mx-4 md:mx-0 rounded-lg lg:mx-auto md:hover:bg-blue-50 shadow-lg hover:shadow-blue-300 md:hover:shadow-gray-400 transition-all duration-500 md:mb-[3rem]`,
-          
-           
-           /*el estado esta haciendo que se vuelva a renderizar cada vez que hay un cambio por ende se vuelve a ejecutar el observer en el useEffect*/
+          ` md:h-[17rem] h-[18rem] w-[22rem] md:w-[25rem] flex flex-col md:mt-[5rem] dark:bg-black/50 dark:hover:bg-black/35 dark:text-white/85 bg-gray-100 border-t-[3px] border-blue-500 md:border-green-400 lg:border-black py-6 px-4 mx-4 md:mx-0 rounded-lg lg:mx-auto md:hover:bg-blue-50 shadow-lg hover:shadow-blue-300 md:hover:shadow-gray-400 transition-all duration-500 md:mb-[3rem]`
+
+          /*el estado esta haciendo que se vuelva a renderizar cada vez que hay un cambio por ende se vuelve a ejecutar el observer en el useEffect*/
         )}
       >
         <div
@@ -59,14 +58,7 @@ const About = () => {
             )}
           >
             <p className="inline-block text-sm md:text-md pr-3">
-              Hi, this is Eliecer, passionate about coding and technologies. 2+
-              Years of experience in the web development industry therefore I
-              handle good logic and several years in development world since
-              2018 in my university time. Experience in iGaming industry in
-              europe as a Frontend Developer and as a self-taught I keep
-              improving my skills. Experience with Java and Node.js so so I have
-              a solid foundation in software development. I like challenges and
-              human quality above all. I like to grow and challenges.
+              {myContentText}
             </p>
           </section>
         </div>
@@ -79,7 +71,7 @@ const About = () => {
         >
           <a href={cvpdf} className="flex gap-2 font-bold" target="_blank">
             CV
-            <img src={cvlogo} alt="" className="w-6 h-6" />
+            <img src={cvlogo} alt="cv-logo" className="w-6 h-6" />
           </a>
         </button>
       </div>
@@ -102,12 +94,14 @@ const About = () => {
         ref={ref4}
       >
         <Accordion
-          summary={"Bachelor's Degree"}
-          subtitle="Institute of Technology 'Antonio Jose de Sucre (2014 - 2019)'"
-          height={8}
+          summary={"Frontend Engineer (React & Next.js)"}
+          subtitle="The Multiple (2025 - current)"
+          height={6.7}
         >
-          Graduated in computer science where I started my world in software development with
-          languages such as C, Java and databases.
+          Frontend Engineer at The Multiple (Malta), building scalable iGaming
+          platforms with modern web technologies, creating services from the API
+          gateway using REST and mainly GraphQL, and delivering responsive,
+          high-performance user experiences.
         </Accordion>
         <Accordion
           summary={"Frontend Developer"}
@@ -124,6 +118,14 @@ const About = () => {
         >
           I have Worked on some projects as a Freelancer, mostly on the frontend
           with JavaScript and React, React Native, Next and TypesCript.
+        </Accordion>
+        <Accordion
+          summary={"Bachelor's Degree"}
+          subtitle="Institute of Technology 'Antonio Jose de Sucre (2014 - 2019)'"
+          height={8}
+        >
+          Graduated in computer science where I started my world in software
+          development with languages such as C, Java and databases.
         </Accordion>
       </aside>
     </div>

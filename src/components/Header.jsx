@@ -6,7 +6,7 @@ import DarkModeUI from "./ui/DarkModeUI";
 import classNames from "classnames";
 import styles from "./Header.module.css";
 
-const Header = () => {
+const Header = ({ fixed = true }) => {
   const [modal, setModal] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
 

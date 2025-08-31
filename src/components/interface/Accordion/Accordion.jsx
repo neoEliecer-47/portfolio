@@ -48,7 +48,7 @@ const Accordion = ({ summary, children, subtitle, height }) => {
         }}
       >
         <span
-          className="font-bold mb-2 text-[1rem] lg:text-xl p-[0.5rem] m-0 block text-black dark:text-white"
+          className="font-bold mb-2 text-[1rem] lg:text-xl p-[0.5rem] m-0 block text-black/70 dark:text-blue-400"
         >
           {subtitle}
         </span>
