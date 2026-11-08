@@ -23,7 +23,7 @@ const Projects = () => {
       </section>
       <div
         className="h-full py-6 px-4 grid grid-cols-1 gap-2 md:grid-cols-2 lg:grid-cols-3 lg:max-w-[1080px] lg:mx-auto"
-        id="projets"
+        id="projects"
       >
         {projectsData.length > 0 &&
           projectsData.map(

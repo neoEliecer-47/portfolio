@@ -79,12 +79,12 @@ const Header = ({ fixed = true }) => {
             About
           </Link>
           <Link
-            to="projets"
+            to="projects"
             className="cursor-pointer hover:bg-white py-1 px-4 duration-500 text-white font-bold hover:text-gray-800"
             smooth={true}
             duration={700}
           >
-            Projets
+            Projects
           </Link>
 
           <Link

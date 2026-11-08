@@ -82,4 +82,4 @@ export const projectsData = [
 ];
 
 export const myContentText =
-  "Frontend Developer with 3+ years of professional experience in web development, specializing in JavaScript/TypeScript, React, and Next.js. Strong foundation in software development from early experience with Java, now focused on building scalable and user-centric applications. Experienced in the European iGaming industry and committed to continuous self-learning since 2018. I thrive on challenges, growth, and delivering high-quality solutions."
+  "Senior Frontend Engineer with 5+ years of experience building fast, scalable web applications with React, Next.js, TypeScript and GraphQL. I’ve spent the last few years in the European iGaming industry, leading frontend releases, mentoring junior developers and evolving an Nx monorepo with shared component libraries used across multiple brands. I started out writing Java in 2018 and have been learning ever since. Today I focus on clean architecture, performance and features that real users depend on. I also have backend experience with Node.js and I’m open to frontend and full-stack roles.";

@@ -38,7 +38,7 @@ const Modal = ({ setModal, modal }) => {
         About
       </Link>
       <Link
-        to="projets"
+        to="projects"
         smooth={true}
         duration={700}
         className="dark:bg-white/85 font-semibold p-2 bg-white md:hover:bg-blue-500 hover:text-white duration-500 mx-4"
